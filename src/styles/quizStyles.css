@@ -1,0 +1,16 @@
+.welcome-container-image {
+    height: 600px;
+    width: 100%;
+    margin-bottom: 25px;
+    overflow: hidden;
+    position: relative;
+}
+
+.siteName {
+    font-size: 2rem;
+    font-family: sans-serif;
+    color: #453E45;
+    /* color: #4E5979; */
+    text-transform: uppercase;
+    letter-spacing: 0.35em;
+}

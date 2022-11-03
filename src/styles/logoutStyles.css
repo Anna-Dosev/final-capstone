@@ -1,0 +1,47 @@
+.main-logout-container {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(232,224,213,1);
+}
+
+.logout-container-text {
+    color: #32384d;
+    font-family: sans-serif;
+    font-weight: lighter;
+    font-size: 1.25rem;
+    letter-spacing: 0.15em;
+    text-align: center;
+    margin: auto;
+}
+
+.logout-signup-text {
+    color: #32384d;
+    font-family: sans-serif;
+    font-size: 1.5rem;
+    font-weight: lighter;
+    letter-spacing: 0.15em;
+}
+
+.logout-form {
+ margin: auto;
+ text-align: center;
+ display: flex;
+ justify-content: center;
+}
+
+.logout-button {
+    margin: 10px;
+    background-color: #cfb6c4;
+    padding: 8px 25px;
+    border: none;
+    border-radius: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+  }
+
+.logout-button:hover {
+    background-color: #cf97b6;
+    color: white;
+  }
+  

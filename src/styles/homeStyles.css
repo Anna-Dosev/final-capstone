@@ -1,0 +1,110 @@
+.welcome-container-image {
+    height: 600px;
+    width: 100%;
+    margin-bottom: 25px;
+    overflow: hidden;
+    position: relative;
+}
+
+.heroPic {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    opacity: 65%;
+}
+
+.siteName-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.siteName {
+    font-size: 3rem;
+    font-family: sans-serif;
+    color: #453E45;
+    /* color: #4E5979; */
+    text-transform: uppercase;
+    letter-spacing: 0.35em;
+}
+
+.about-container {
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(232,224,213,1);
+}
+
+.about-container-image {
+    border: 20px solid white;
+    border-radius: 10px;
+    min-height: 400px;
+    min-width: 300px;
+    margin: 15px; 
+}
+
+.introPic {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.about-container-text {
+    margin: auto;
+    max-width: 30%;
+}
+
+.welcome-text {
+    color: #32384d;
+    font-family: sans-serif;
+    font-weight: lighter;
+    font-size: 3rem;
+    letter-spacing: 0.15em;
+}
+
+.intro-text {
+    font-size: 1.15rem;
+    color: #453E45;
+}
+
+.signup-text {
+    color: #32384d;
+    font-family: sans-serif;
+    font-size: 1.5rem;
+    font-weight: lighter;
+    letter-spacing: 0.15em;
+}
+
+.about-container-login {
+    width: 1000px;
+    margin: auto;
+    justify-content: center;
+    display: flex;
+}
+
+.home-blog-container {
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(232,224,213,1);
+    padding: 20px;
+}
+
+.home-blog-item {
+    border: 2px solid black;
+    margin: auto;
+    text-align: center;
+}
+
+.home-blog-image {
+    border: 2px dashed black;
+    height: 300px;
+    width: 400px;
+}
+
+.blog-title-text {
+    color: #32384d;
+    font-family: sans-serif;
+    font-size: 1.5rem;
+    font-weight: lighter;
+    letter-spacing: 0.15em;
+}
