@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
-import { Home, Blog, Quiz, Resources, LogOut, LogIn } from '../views';
+import { Home, Blog, Quiz, RouteTimeline, Resources, LogOut, LogIn } from '../views';
 
 const Main = () => {
   return (
@@ -9,6 +9,7 @@ const Main = () => {
         <Route path="/blog" element={<Blog />} />
         <Route path="/quiz" element={<Quiz />} />
         <Route path="/resources" element={<Resources />} />
+        <Route path="/routeTimeline" element={<RouteTimeline />} />
         <Route path="/logout" element={<LogOut />} />
         <Route path="/login" element={<LogIn />} />
       </Routes>

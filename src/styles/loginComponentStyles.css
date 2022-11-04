@@ -26,11 +26,12 @@
   display: flex;
   margin: 10px;
   background-color: #cfb6c4;
-  padding: 8px 25px;
+  padding: 10px;
   border: none;
   border-radius: 10px;
   text-transform: uppercase;
   letter-spacing: 0.25em;
+  text-align: left;
 }
 
 .checkbox-container {
@@ -56,4 +57,5 @@
   color:red;
   margin-left: auto;
   margin-right: auto;
+  font-size: .75rem;
 }
