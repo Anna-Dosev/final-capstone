@@ -1,0 +1,60 @@
+* {
+  font-family: sans-serif;
+}
+
+.login-container {
+  width: 50%;
+  background-color: transparent;
+}
+
+.info-field {
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  margin: 5px;
+  width: 90%;
+  font-size: .70rem;
+}
+.names-input-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.login-button {
+  display: flex;
+  margin: 10px;
+  background-color: #cfb6c4;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  text-align: left;
+}
+
+.checkbox-container {
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+}
+
+.checkbox-text {
+  letter-spacing: 0.2em;
+  line-height: 1.15rem;
+  color: #453E45;
+  padding-left: 10px;
+}
+
+.login-button:hover {
+  background-color: #cf97b6;
+  color: white;
+}
+
+.message {
+  font-family: monospace;
+  color:red;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: .75rem;
+}
