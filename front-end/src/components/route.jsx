@@ -4,9 +4,9 @@ import '../styles/routeStyles.css';
 const Route = () => {
     return (
         <div className="route-container">
-          {/* <h1 className="route-header">
-              My Route and Timeline
-          </h1> */}
+          <h1 className="route-header">
+              Route and Timeline
+          </h1>
           <div className="route-info-boxes">
             <div className="info-box">11,500 miles</div>
             <div className="info-box">174 days</div>

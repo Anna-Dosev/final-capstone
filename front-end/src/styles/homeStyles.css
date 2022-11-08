@@ -188,6 +188,7 @@
 .home-blog-image {
     height: 300px;
     width: 400px;
+    border-radius: 8px;
 }
 
 .blog-title-text {

@@ -9,7 +9,7 @@ const RouteTimeline = () => {
           <div className="blog-welcome-container-image">
             <img className="blog-heroPic" src={heroPic}/>
               <div className="blog-siteName-container">
-                <h1 className="blog-siteName">My Route and Timeline</h1>
+                <h1 className="blog-siteName">My Way Around the USA</h1>
               </div>
           </div>
           <Route />

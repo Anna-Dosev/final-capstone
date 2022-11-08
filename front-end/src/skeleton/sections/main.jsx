@@ -1,7 +1,8 @@
 import { Routes, Route } from 'react-router-dom';
+import { useState } from 'react';
 import { Home, Blog, Quiz, RouteTimeline, Resources, LogOut, LogIn } from '../views';
 
-const Main = () => {
+const Main = ( {setIsLoggedIn} ) => {
   return (
     <main>
       <Routes>

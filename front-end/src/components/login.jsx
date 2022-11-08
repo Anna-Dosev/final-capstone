@@ -1,4 +1,5 @@
 import { useState } from 'react';
+// import { useDispatch } from 'react-redux';
 import Message from './message';
 import Message3 from './message3';
 import '../styles/loginComponentStyles.css'
@@ -8,6 +9,12 @@ const Login = ({ setIsLoggedIn }) => {
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState(false);
   const [message3, setMessage3] = useState(false);
+  // const dispatch = useDispatch();
+
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   dispatch(addProfile(fields))
+  // }
 
   const handleChange3 = (e) => {
     const inputVal = e.target.value;

@@ -51,8 +51,8 @@
       "className": "navs__secondary",
       "href": "/login",
       "id": 7,
-      "onLoggedIn": true,
-      "onLoggedOut": false,
+      "onLoggedIn": false,
+      "onLoggedOut": true,
       "text": "Log In"
     }
   ]
