@@ -24,7 +24,7 @@ const Blog = () => {
             </div>
             <div className="blog-item-text">
               <p className="blog-subtitle-text">
-                Witty Subtitle 
+                We got lucky with sunny days ... 
               </p>
               <p className="blog-content-text">My name is Anna, and I am a roadtrip extraordinaire and aspiring full-stack web developer.
                   I spent the last six months driving across the United States while working remotely.
@@ -35,7 +35,7 @@ const Blog = () => {
           <div className="blog-item-container">
             <div className="blog-item-text">
               <p className="blog-subtitle-text">
-                Witty Subtitle 
+                I started the trail by myself in the dark ... 
               </p>
               <p className="blog-content-text">My name is Anna, and I am a roadtrip extraordinaire and aspiring full-stack web developer.
                   I spent the last six months driving across the United States while working remotely.
@@ -58,7 +58,7 @@ const Blog = () => {
             </div>
             <div className="blog-item-text">
               <p className="blog-subtitle-text">
-                Witty Subtitle 
+                Springs are best seen in the summer ...   
               </p>
               <p className="blog-content-text">My name is Anna, and I am a roadtrip extraordinaire and aspiring full-stack web developer.
                   I spent the last six months driving across the United States while working remotely.

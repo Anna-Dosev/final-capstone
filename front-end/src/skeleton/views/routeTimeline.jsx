@@ -3,7 +3,7 @@ import PhotoGallery from '../../components/gallery';
 import heroPic from '../../assets/photos/hero.jpg'
 import '../../styles/routeStyles.css';
 
-const RouteTimeline = () => {
+const Routetimeline = () => {
     return (
         <div>
           <div className="blog-welcome-container-image">
@@ -18,4 +18,4 @@ const RouteTimeline = () => {
     );
   };
   
-  export default RouteTimeline;
+  export default Routetimeline;

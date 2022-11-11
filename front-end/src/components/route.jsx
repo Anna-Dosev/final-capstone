@@ -1,3 +1,4 @@
+import PhotoGallery from '../components/gallery';
 import '../styles/routeStyles.css';
 
 
@@ -18,6 +19,7 @@ const Route = () => {
               Durango • Santa Fe • Amarillo • Dallas 
           </div>
           <div class="main-timeline">
+
             <div class="timeline">
                     <div class="timeline-content">
                         <div class="content">
@@ -60,6 +62,8 @@ const Route = () => {
                         </div>
                     </div>
                 </div>
+
+
             <div class="timeline">
                     <div class="timeline-content">
                         <div class="content">
@@ -111,6 +115,7 @@ const Route = () => {
                 </div>
             </div>
           </div>
+
         </div>
     )
 }

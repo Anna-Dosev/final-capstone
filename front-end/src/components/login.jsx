@@ -1,5 +1,6 @@
 import { useState } from 'react';
-// import { useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import { login, fetchUser } from '../redux/features/userSlice';
 import Message from './message';
 import Message3 from './message3';
 import '../styles/loginComponentStyles.css'
@@ -9,12 +10,7 @@ const Login = ({ setIsLoggedIn }) => {
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState(false);
   const [message3, setMessage3] = useState(false);
-  // const dispatch = useDispatch();
-
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   dispatch(addProfile(fields))
-  // }
+  const dispatch = useDispatch();
 
   const handleChange3 = (e) => {
     const inputVal = e.target.value;
@@ -26,29 +22,37 @@ const Login = ({ setIsLoggedIn }) => {
     setPassword(inputVal);
   };
 
-  const handleSubmit = (e, email, password) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    if (email == '' || password == '') {
+
+    if (email === '' || password === '') {
       setMessage(true);
-    } else if (email == 'XYZ@email.com') {
+    } else if (email === 'XYZ@email.com') { //if someone tries to log in with an email that is not in database
       setMessage3(true);
-    }  else {
-      fetch("http://localhost:8080/login", {
-        method: "POST",
-        body: JSON.stringify({ email, password }), 
-        headers: {
-          "Content-Type": "application/json",
-        },
-      })
-        .then((res) => res.json ())
-        .then((data) => console.log(data));
-      setIsLoggedIn(true);
+    } else {
+    dispatch(fetchUser({email, password}))
     }
+    // if (email === '' || password === '') {
+    //   setMessage(true);
+    // } else if (email === 'XYZ@email.com') {
+    //   setMessage3(true);
+    // }  else {
+    //   fetch("http://localhost:8080/login", {
+    //     method: "POST",
+    //     body: JSON.stringify({ email, password }), 
+    //     headers: {
+    //       "Content-Type": "application/json",
+    //     },
+    //   })
+    //     .then((res) => res.json ())
+    //     .then((data) => console.log(data));
+    //   setIsLoggedIn(true);
+   // }
 }
   
 
   return (
-    <form className="login-container" onSubmit={(e) => handleSubmit(e, email, password)}>
+    <form className="login-container" onSubmit={handleSubmit}>
       <div className="input-container">
         <input className="info-field"
           value={email}
@@ -60,7 +64,6 @@ const Login = ({ setIsLoggedIn }) => {
         <input className="info-field"
           value={password}
           onChange={handleChange4}
-          type="password"
           name="password"
           placeholder="PASSWORD"
         ></input>

@@ -1,13 +1,14 @@
 import { NavLink } from 'react-router-dom';
 import '../../styles/navbarStyles.css';
 
-const Header = ( {data, setIsLoggedIn }) => {
+const Header = ( {data, isLoggedIn }) => {
   const navItems = data.map((navItem) => {
-    if (navItem.onLoggedOut == true) {
+    //demo@user.com
+    if (navItem.onLoggedOut == true && !isLoggedIn) {
       return (
           <NavLink className="navbar" to={navItem.href} key={navItem.id}>{navItem.text}</NavLink>
       )
-    } else if (!setIsLoggedIn) {
+    } else if (navItem.onLoggedIn == true && isLoggedIn) {
       return (
           <NavLink className="navbar" to={navItem.href} key={navItem.id}>{navItem.text}</NavLink>
       )

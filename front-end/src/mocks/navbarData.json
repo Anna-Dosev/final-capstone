@@ -33,7 +33,7 @@
     },
     {
       "className": "navs__secondary",
-      "href": "/routeTimeline",
+      "href": "/routetimeline",
       "id": 5,
       "onLoggedIn": true,
       "onLoggedOut": true,

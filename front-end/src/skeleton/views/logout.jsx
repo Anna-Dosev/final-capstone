@@ -1,10 +1,15 @@
-
 import '../../styles/logoutStyles.css';
+import { useDispatch, useSelector } from 'react-redux';
+import { selectUser, logout } from '../../redux/features/userSlice'
 
 const LogOut = ( {setIsLoggedIn}) => {
+  const user = useSelector(selectUser);
+  const dispatch = useDispatch();
   const handleLogOut = (e) => {
-    setIsLoggedIn(false);
+    e.preventDefault();
+    dispatch(logout());
   };
+
     return (
     <div className="main-logout-container">
       <div className="logout-container-text">

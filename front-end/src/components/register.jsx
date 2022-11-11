@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { register } from '../redux/features/registerSlice';
 import Message from './message';
 import Message2 from './message2';
 import '../styles/loginComponentStyles.css'
@@ -11,6 +13,7 @@ const Register = ({ setIsLoggedIn }) => {
   const [message, setMessage] = useState(false);
   const [message2, setMessage2] = useState(false);
   const [newsletter, setNewsletter] = useState(false);
+  const dispatch = useDispatch();
 
   const handleChange = (e) => {
     const inputVal = e.target.value;
@@ -35,9 +38,15 @@ const Register = ({ setIsLoggedIn }) => {
 
   const handleSubmit = (e, firstName, lastName, email, password) => {
     e.preventDefault();
-    if (firstName == '' || lastName == '' || email == '' || password == '') {
+    dispatch(register({
+      firstName,
+      lastName,
+      email,
+      password,
+    }))
+    if (firstName === '' || lastName === '' || email === '' || password === '') {
       setMessage(true);
-    } else if (email == 'demo@email.com') {
+    } else if (email === 'demo@email.com') {
       setMessage2(true);
     } else {
 

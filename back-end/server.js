@@ -1,12 +1,18 @@
+const passport = require('passport');
 const express = require('express');
 const cors = require('cors');
 const { User } = require('./models');
 const path = require('path');
 const server = express();
+
+const { authRouter, resourcesRouter } = require('./routes');
+
 server.use(cors({ origin: (orig, cb) => cb(null, true), credentials: true }));
 
 //server.use(express.static(path.resolve))
 server.use(express.json());
+server.use('/auth', authRouter);
+server.use('/resources', resourcesRouter);
 
 server.get('/', (req, res) => {
     res.sendFile('./index.html') //wat dis?
@@ -20,21 +26,6 @@ server.get('/checkAuth/:id', (req, res) => {
     res.json({"isAuthenticated" : true})
   })  
 
-server.post('/login', async (req, res) => {
-    const { email, password, } = req.body;
-    console.log(req.body)
-    const user = await User.findOne({
-      where: {
-        email: email,
-        password: password,
-      }
-    }); 
-    console.log(user)
-    if (user) {
-    //   req.session.user = user;
-      res.send(user);
-    }
-});
 
 server.post('/register', async (req, res) => {
     const { firstName, lastName, email, password, newsletter } = req.body;
