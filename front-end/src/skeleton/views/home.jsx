@@ -7,33 +7,33 @@ import oregonCoastBlog from '../../assets/photos/oregonCoastBlog.png'
 import { useNavigate } from 'react-router-dom'
 import '../../styles/homeStyles.css';
 
-const Home = ( {setIsLoggedIn} ) => {
+const Home = ( {isLoggedIn} ) => {
   const navigate = useNavigate();
   const navToRoute = (e) => {
-    if (setIsLoggedIn) {
+    if (isLoggedIn) {
       navigate('/routetimeline');
-    } else if (!setIsLoggedIn) {
+    } else if (!isLoggedIn) {
       navigate('/login');
     }
   }
   const navToBlog = (e) => {
-    if (setIsLoggedIn) {
-      navigate('/blog');
-    } else if (!setIsLoggedIn) {
+    if (isLoggedIn) {
+      navigate('/blog'); 
+    } else if (!isLoggedIn) {
       navigate('/login');
     }
   }
     return (
       <div>
           <div className="welcome-container-image">
-            <img className="heroPic" src={heroPic}/>
+            <img className="heroPic" src={heroPic} alt=""/>
             <div className="siteName-container">
               <h1 className="siteName">There she codes</h1>
             </div>
           </div>
           <div className="about-container">
             <div className="about-container-image">
-              <img className="introPic" src={introPic}/>
+              <img className="introPic" src={introPic} alt=""/>
             </div>
             <div className="about-container-text">
               <h1 className="welcome-text">Hi there!</h1>

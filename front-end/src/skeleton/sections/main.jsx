@@ -2,11 +2,11 @@ import { Routes, Route } from 'react-router-dom';
 import { useState } from 'react';
 import { Home, Blog, Quiz, Routetimeline, Resources, LogOut, LogIn } from '../views';
 
-const Main = ( {setIsLoggedIn} ) => {
+const Main = ( {isLoggedIn} ) => {
   return (
     <main>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home isLoggedIn={isLoggedIn} />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/quiz" element={<Quiz />} />
         <Route path="/resources" element={<Resources />} />
