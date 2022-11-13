@@ -17,11 +17,11 @@ const Home = ( {isLoggedIn} ) => {
     }
   }
   const navToBlog = (e) => {
-    if (isLoggedIn) {
+    // if (isLoggedIn) {
       navigate('/blog'); 
-    } else if (!isLoggedIn) {
-      navigate('/login');
-    }
+    // } else if (!isLoggedIn) {
+    //   navigate('/login');
+    // }
   }
     return (
       <div>

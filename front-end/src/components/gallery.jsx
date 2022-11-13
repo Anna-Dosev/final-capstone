@@ -1,76 +1,57 @@
+import pnw1 from '../assets/photos/pnw/pnw1.png'
+import pnw3 from '../assets/photos/pnw/pnw3.png'
+import pnw4 from '../assets/photos/pnw/pnw4.jpg'
+import pnw5 from '../assets/photos/pnw/pnw5.png'
+import cal1 from '../assets/photos/cal/cal1.png'
+import cal2 from '../assets/photos/cal/cal2.png'
+import cal3 from '../assets/photos/cal/cal3.png'
+import cal5 from '../assets/photos/cal/cal5.png'
+import utah1 from '../assets/photos/utah/utah1.png'
+import utah2 from '../assets/photos/utah/utah2.png'
+import utah3 from '../assets/photos/utah/utah3.png'
+import utah4 from '../assets/photos/utah/utah4.png'
+import sw1 from '../assets/photos/sw/sw1.png'
+import sw2 from '../assets/photos/sw/sw2.png'
+import sw3 from '../assets/photos/sw/sw3.png'
+import sw4 from '../assets/photos/sw/sw4.png'
 import '../styles/galleryStyles.css';
-import gallery1 from '../assets/photos/gallery1.png'
-import gallery2 from '../assets/photos/gallery2.png'
-import gallery3 from '../assets/photos/gallery3.png'
-import gallery4 from '../assets/photos/gallery4.png'
-import gallery5 from '../assets/photos/gallery5.png'
 
-const PhotoGallery = () => {
+const Gallery = () => {
     return (
-      <div className="gallery-body">
-        <div className="slider">
-          <div className="slides">
-            <input type="radio" name="radio-btn" id="radio1"/>
-            <input type="radio" name="radio-btn" id="radio2"/>
-            <input type="radio" name="radio-btn" id="radio3"/>
-            <input type="radio" name="radio-btn" id="radio4"/>
-            <input type="radio" name="radio-btn" id="radio5"/>
-            <div className="slide first">
-              <img src={gallery1} alt=""/>
+        <div>
+          <h1 className="route-header">Photo Gallery</h1>
+          <p className="gallery-subtitle">THE PACIFIC NORTHWEST</p>
+          <div className="photos">
+            <div className="pnw-photos">
+                <img className="photo" src={pnw1} alt=""/>
+                <img className="photo" src={pnw3} alt=""/>
+                <img className="photo" src={pnw4} alt=""/>
+                <img className="photo" src={pnw5} alt=""/>
             </div>
-            <div className="slide">
-              <img src={gallery2} alt=""/>
+            <p className="gallery-subtitle">CALIFORNIA</p>
+            <div className="pnw-photos">
+                <img className="photo" src={cal1} alt=""/>
+                <img className="photo" src={cal3} alt=""/>
+                <img className="photo" src={cal2} alt=""/>
+                <img className="photo" src={cal5} alt=""/>
             </div>
-            <div className="slide">
-              <img src={gallery3} alt=""/>
-            </div>
-            <div className="slide">
-              <img src={gallery4} alt=""/>
-            </div>
-            <div className="slide">
-              <img src={gallery5} alt=""/>
-            </div>
-            <div className="nav-auto">
-              <div className="auto-btn1"></div>
-              <div className="auto-btn2"></div>
-              <div className="auto-btn3"></div>
-              <div className="auto-btn4"></div>
-              <div className="auto-btn5"></div>
-            </div>
-          </div>
-          <div className="nav-manual">
-            <label htmlFor="radio1" className="manual-btn"></label>
-            <label htmlFor="radio2" className="manual-btn"></label>
-            <label htmlFor="radio3" className="manual-btn"></label>
-            <label htmlFor="radio4" className="manual-btn"></label>
-            <label htmlFor="radio5" className="manual-btn"></label>
+            <p className="gallery-subtitle">UTAH + WYOMING</p>
+            <div className="pnw-photos">
+                <img className="photo" src={utah1} alt=""/>
+                <img className="photo" src={utah2} alt=""/>
+                <img className="photo" src={utah4} alt=""/>
+                <img className="photo" src={utah3} alt=""/>
+            </div> 
+            <p className="gallery-subtitle">SOUTHWESTERN U.S.A.</p>
+            <div className="pnw-photos">
+                <img className="photo" src={sw1} alt=""/>
+                <img className="photo" src={sw2} alt=""/>
+                <img className="photo" src={sw3} alt=""/>
+                <img className="photo" src={sw4} alt=""/>
+            </div> 
           </div>
         </div>
-      </div>
-
-
-
-
-
-
-        // <div className="gallery-pics-container">
-        //   <div className="gallery-pics">
-        //     <img className="gallery-pic" src={gallery1} alt=""/>
-        //   </div>
-        //   <div className="gallery-pics">
-        //     <img className="gallery-pic" src={gallery2} alt=""/>
-        //   </div>
-        //   <div className="gallery-pics">
-        //     <img className="gallery-pic" src={gallery3} alt=""/>
-        //   </div>
-        //   <div className="gallery-pics">
-        //     <img className="gallery-pic" src={gallery4} alt=""/>
-        //   </div>
-        //   <div className="gallery-pics">
-        //     <img className="gallery-pic" src={gallery5} alt=""/>
-        //   </div>
-        // </div>
     )
 }
 
-    export default PhotoGallery
+export default Gallery;

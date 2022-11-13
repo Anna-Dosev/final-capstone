@@ -1,5 +1,5 @@
 import Route from '../../components/route';
-import PhotoGallery from '../../components/gallery';
+import Gallery from '../../components/gallery';
 import heroPic from '../../assets/photos/hero.jpg'
 import '../../styles/routeStyles.css';
 
@@ -13,7 +13,7 @@ const Routetimeline = () => {
               </div>
           </div>
           <Route />
-          <PhotoGallery />
+          <Gallery />
        </div>
     );
   };

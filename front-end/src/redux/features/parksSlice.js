@@ -4,6 +4,7 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 export const fetchParks = createAsyncThunk('parks/all', async () => {
   const apiUrl = 'https://jonahtaylor-national-park-service-v1.p.rapidapi.com/parks'
   const response = await fetch(apiUrl, {
+      params: {limit: 5},
       method: 'GET',
       headers: {
         'X-Api-Key': 'QMo8oekxSdeQBLy4f7uE6Xi3qdaIKbkzfiIPSKfh',
@@ -12,9 +13,8 @@ export const fetchParks = createAsyncThunk('parks/all', async () => {
       }
   });
   const data = await response.json();
-  const parks = Object.keys(data.message);
 
-  return parks;
+  return data.data;
 });
 
 export const parksSlice = createSlice({
@@ -30,6 +30,5 @@ export const parksSlice = createSlice({
 
 // reading from the store
 export const selectParks = state => state.parks
-
 
 export default parksSlice.reducer;

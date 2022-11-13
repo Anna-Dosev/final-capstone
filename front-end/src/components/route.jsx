@@ -1,4 +1,3 @@
-import PhotoGallery from '../components/gallery';
 import '../styles/routeStyles.css';
 
 
@@ -18,7 +17,7 @@ const Route = () => {
               Santa Cruz • Big Sur • Santa Barbara • Los Angeles • San Diego • Mammoth Lakes • Tahoe • Salt Lake City • Jackson Hole • Zion • Las Vegas • Flagstaff • Sedona • 
               Durango • Santa Fe • Amarillo • Dallas 
           </div>
-          <div class="main-timeline">
+          {/* <div class="main-timeline">
 
             <div class="timeline">
                     <div class="timeline-content">
@@ -114,7 +113,7 @@ const Route = () => {
                     </div>
                 </div>
             </div>
-          </div>
+          </div> */}
 
         </div>
     )

@@ -7,6 +7,7 @@ import Blog5 from '../../components/blog-content/blog5'
 import hiddenFLBlog from '../../assets/photos/hiddenFLBlog.png'
 import sunriseZionBlog from '../../assets/photos/sunriseZionBlog.png'
 import oregonCoastBlog from '../../assets/photos/oregonCoastBlog.png'
+// import route395Blog from '../../assets/photos/rote395Blog.png'
 import '../../styles/blogStyles.css';
 
 const Blog = () => {
@@ -61,7 +62,7 @@ const Blog = () => {
               <Blog3/>
             </div>
           </div>
-          <div className="blog-item-container">
+          {/* <div className="blog-item-container">
             <div className="blog-item-text">
               <p className="blog-subtitle-text">
               SAMPLE BLOG TITLE ...  
@@ -70,12 +71,12 @@ const Blog = () => {
             </div>
             <div className="blog-item">
               <div className="blog-item-visual">
-                <img className="blog-image" src={sunriseZionBlog} alt=""/>
+                <img className="blog-image" src={route395Blog} alt=""/>
                 <h3 className="blog-title-text">U.S. Route 395</h3>
               </div>
             </div>
-          </div>
-          <div className="blog-item-container">
+          </div> */}
+          {/* <div className="blog-item-container">
             <div className="blog-item">
               <div className="blog-item-visual">
                 <img className="blog-image" src={hiddenFLBlog} alt=""/>
@@ -88,7 +89,7 @@ const Blog = () => {
               </p>
               <Blog5/>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
       )  

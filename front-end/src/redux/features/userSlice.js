@@ -9,6 +9,10 @@ export const fetchUser = createAsyncThunk('users/all', async ({email, password})
         },
   });
   const data = await response.json();
+  if (data.token) {
+    localStorage.setItem('token', data.token)
+  }
+  // localStorage.getItem('token')
   return data;
 });
 

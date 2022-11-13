@@ -22,6 +22,16 @@
     line-height: 1.5rem;
 }
 
+.gallery-subtitle {
+    /* width: 75%; */
+    /* margin: auto; */
+    text-align: center;
+    padding: 20px;
+    font-weight: lighter;
+    letter-spacing: 0.25em;
+    font-size: 1.25rem;
+}
+
 .route-info-boxes {
     display: flex;
     flex-direction: row;
@@ -43,6 +53,12 @@
 .main-timeline{ 
     position: relative; 
     margin: 0 15px;
+}
+
+.gallery-container {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
 }
 
 /* vertical line down center of page */
@@ -135,6 +151,7 @@
 .main-timeline .timeline:last-child:nth-child(even){
     margin: 0;
 }
+
 
 @media only screen and (max-width: 990px){
     .main-timeline:before{ left: 100%; }
