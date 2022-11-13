@@ -1,4 +1,8 @@
 import '../styles/routeStyles.css';
+import route from '../assets/photos/route.png'
+import dot1 from '../assets/photos/dots/dot1.png'
+import dot2 from '../assets/photos/dots/dot2.png'
+import dot3 from '../assets/photos/dots/dot3.png'
 
 
 const Route = () => {
@@ -17,104 +21,25 @@ const Route = () => {
               Santa Cruz • Big Sur • Santa Barbara • Los Angeles • San Diego • Mammoth Lakes • Tahoe • Salt Lake City • Jackson Hole • Zion • Las Vegas • Flagstaff • Sedona • 
               Durango • Santa Fe • Amarillo • Dallas 
           </div>
-          {/* <div class="main-timeline">
-
-            <div class="timeline">
-                    <div class="timeline-content">
-                        <div class="content">
-                            <span class="year">All Around Florida</span>
-                            <p class="description">
-                                The trip officially started in Jacksonville Beach, Florida. We waved goodbye to the Atlantic as we began our journey west. 
-                                Spending a few days in my home of Pensacola was a must. Nothing beats a tiki bar, emerald water, or that sugar white sand ... or so we thought.
-                            </p>
-                        </div>
-                    </div>
+          <div className="map-container">
+            <div className="map-image">
+              <img src={route} alt=""/>
+            </div>
+            <div className="map-elements">
+                <div className="map-keys">
+                  <img src={dot2} alt=""/>
+                  <p className="map-text">Initial route from Jax Beach to Cannon Beach <br/> Ten days from coast to coast </p>
                 </div>
-            <div class="timeline">
-                    <div class="timeline-content">
-                        <div class="content">
-                            <span class="year">Coast to Coast</span>
-                            <p class="description">
-                                Pensacola • Memphis • Wichita • Denver • Salt Lake City • Boise • Hood River • Cannon Beach <br></br><br></br>
-                                
-                            </p>
-                        </div>
-                    </div>
+                <div className="map-keys">
+                  <img src={dot1} alt=""/>
+                  <p className="map-text">Main backbone of the route <br/> The time spent in one place varied from one night to four weeks</p>
                 </div>
-            <div class="timeline">
-                    <div class="timeline-content">
-                        <div class="content">
-                            <span class="year">The Pacific Northwest</span>
-                            <p class="description">
-                                Tristique senectus et netus et malesuada fames. Sit amet consectetur adipiscing elit pellentesque. Felis imperdiet proin fermentum leo vel orci porta non pulvinar. 
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            <div class="timeline">
-                    <div class="timeline-content">
-                        <div class="content">
-                            <span class="year">California 1: The Pacific Coast Highway</span>
-                            <p class="description">
-                                Tristique senectus et netus et malesuada fames. Sit amet consectetur adipiscing elit pellentesque. Felis imperdiet proin fermentum leo vel orci porta non pulvinar. 
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-
-            <div class="timeline">
-                    <div class="timeline-content">
-                        <div class="content">
-                            <span class="year">San Diego</span>
-                            <p class="description">
-                                Tristique senectus et netus et malesuada fames. Sit amet consectetur adipiscing elit pellentesque. Felis imperdiet proin fermentum leo vel orci porta non pulvinar. 
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            <div class="timeline">
-                    <div class="timeline-content">
-                        <div class="content">
-                            <span class="year">U.S. Route 395</span>
-                            <p class="description">
-                                Tristique senectus et netus et malesuada fames. Sit amet consectetur adipiscing elit pellentesque. Felis imperdiet proin fermentum leo vel orci porta non pulvinar. 
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            <div class="timeline">
-                    <div class="timeline-content">
-                        <div class="content">
-                            <span class="year">Salt Lake City</span>
-                            <p class="description">
-                                Tristique senectus et netus et malesuada fames. Sit amet consectetur adipiscing elit pellentesque. Felis imperdiet proin fermentum leo vel orci porta non pulvinar. 
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            <div class="timeline">
-                    <div class="timeline-content">
-                        <div class="content">
-                            <span class="year">Outlaw Land</span>
-                            <p class="description">
-                                Tristique senectus et netus et malesuada fames. Sit amet consectetur adipiscing elit pellentesque. Felis imperdiet proin fermentum leo vel orci porta non pulvinar. 
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            <div class="timeline">
-                <div class="timeline-content">
-                    <div class="content">
-                        <span class="year">The Long Road Back</span>
-                        <p class="description">
-                            Tristique senectus et netus et malesuada fames. Sit amet consectetur adipiscing elit pellentesque. Felis imperdiet proin fermentum leo vel orci porta non pulvinar. 
-                        </p>
-                    </div>
+                <div className="map-keys">
+                  <img src={dot3} alt=""/>
+                  <p className="map-text">Weekend trips and noteable pit-stops<br/> Mt. Rainer • Lake Tahoe • Tetons • Zion</p>
                 </div>
             </div>
-          </div> */}
-
+          </div>
         </div>
     )
 }

@@ -1,6 +1,10 @@
-
+import { useNavigate } from 'react-router-dom'
 
 const Blog2 = () => {
+  const navigate = useNavigate();
+  const navToPhotos = (e) => {
+      navigate('/routetimeline'); 
+  }
     return (
       <p className="blog-content-text"> 
       Very little can prepare you for the grandeur of Zion National Park. Even after multiple visits, I am still in awe of the dusty orange canyon and the authority it emanates.  
@@ -12,7 +16,7 @@ const Blog2 = () => {
       After the faintest glimpse of the ridge became visible, I got out my flashlight and started up the switchbacks. 
       I made it to the top and passed the chained rope section before the sun fully rose. Mission accomplished. The only other person who beat me to the top was leaving, so I had a solid hour to myself before the shuttle crowds arrived. 
       <br></br><br></br>
-      More photos from Zion and Angel's Landing 
+      <p className="nav-to-photos" onClick={navToPhotos}>More photos from Zion</p>
       </p>
     )
 }

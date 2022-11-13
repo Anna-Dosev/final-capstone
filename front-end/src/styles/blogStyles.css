@@ -93,3 +93,8 @@
 .blog-content-text {
     font-size: .90rem;
 }
+
+.nav-to-photos:hover {
+    cursor: pointer;
+    font-weight: bolder;
+}

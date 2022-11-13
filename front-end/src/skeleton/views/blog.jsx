@@ -7,7 +7,7 @@ import Blog5 from '../../components/blog-content/blog5'
 import hiddenFLBlog from '../../assets/photos/hiddenFLBlog.png'
 import sunriseZionBlog from '../../assets/photos/sunriseZionBlog.png'
 import oregonCoastBlog from '../../assets/photos/oregonCoastBlog.png'
-// import route395Blog from '../../assets/photos/rote395Blog.png'
+// import route395Blog from '../../assets/photos/rote395Blog.png's
 import '../../styles/blogStyles.css';
 
 const Blog = () => {

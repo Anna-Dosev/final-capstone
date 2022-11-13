@@ -1,6 +1,10 @@
-
+import { useNavigate } from 'react-router-dom'
 
 const Blog1 = () => {
+  const navigate = useNavigate();
+  const navToPhotos = (e) => {
+      navigate('/routetimeline'); 
+  }
     return (
       <p className="blog-content-text">Northern, coastal Oregon has a reputation for maintaining permanent cloud coverage and a constant veil of mist. 
       While this might be the case for most of the year, the sun is frequently able to break through that canopy during the summer months — which is when I arrived. 
@@ -12,7 +16,7 @@ const Blog1 = () => {
       The activity doesn't stop when the mist returns. Locals are well-equiped for the climate and embrace the outdoors all year round, which is not surprising 
       when you live in a place where you can go surfing and snowboarding in the same day. 
       <br></br><br></br> 
-      More photos from the Pacific Northwest  
+      <p className="nav-to-photos" onClick={navToPhotos} >More photos from the Pacific Northwest </p>
       </p>
     )
 }

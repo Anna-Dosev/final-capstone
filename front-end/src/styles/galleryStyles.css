@@ -11,14 +11,22 @@
     border: 2px solid #96A6BF;
 }
 
+
 @media only screen and (max-width: 1300px) {
-.pnw-photos {
-  display:flex;
-  flex-direction: column;
+ 
+ .pnw-photos {
+     display: grid;
+     grid-template-columns: repeat(2, 300px);
+     grid-row-gap: 15px;
+     grid-column-gap: 15px;
+     justify-content: center;
+ }
 
 }
 
-.photo {
-    margin-bottom: 10px;
+@media only screen and (max-width: 925px) {
+.pnw-photos {
+  display:flex;
+  flex-direction: column;
 }
 }

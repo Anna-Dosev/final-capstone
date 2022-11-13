@@ -6,6 +6,7 @@ const path = require('path');
 const server = express();
 
 const { authRouter, resourcesRouter } = require('./routes');
+// const ( regRouter ) = require('./routes');
 
 server.use(cors({ origin: (orig, cb) => cb(null, true), credentials: true }));
 
@@ -13,6 +14,7 @@ server.use(cors({ origin: (orig, cb) => cb(null, true), credentials: true }));
 server.use(express.json());
 server.use('/auth', authRouter);
 server.use('/resources', resourcesRouter);
+// server.use('/registrants', regRouter);
 
 server.get('/', (req, res) => {
     res.sendFile('./index.html') //wat dis?

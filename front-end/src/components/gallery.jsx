@@ -39,8 +39,8 @@ const Gallery = () => {
             <div className="pnw-photos">
                 <img className="photo" src={utah1} alt=""/>
                 <img className="photo" src={utah2} alt=""/>
-                <img className="photo" src={utah4} alt=""/>
                 <img className="photo" src={utah3} alt=""/>
+                <img className="photo" src={utah4} alt=""/>
             </div> 
             <p className="gallery-subtitle">SOUTHWESTERN U.S.A.</p>
             <div className="pnw-photos">

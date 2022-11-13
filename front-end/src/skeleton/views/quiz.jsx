@@ -13,3 +13,13 @@ const Quiz = () => {
   };
   
   export default Quiz;
+
+  // Removed from data file
+  // {
+  //   "className": "navs__secondary",
+  //   "href": "/quiz",
+  //   "id": 3,
+  //   "onLoggedIn": true,
+  //   "onLoggedOut": true,
+  //   "text": "Quiz"
+  // },

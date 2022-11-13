@@ -15,14 +15,7 @@
       "onLoggedOut": true,
       "text": "Blog"
     },
-    {
-      "className": "navs__secondary",
-      "href": "/quiz",
-      "id": 3,
-      "onLoggedIn": true,
-      "onLoggedOut": true,
-      "text": "Quiz"
-    },
+  
     {
       "className": "navs__secondary",
       "href": "/resources",
