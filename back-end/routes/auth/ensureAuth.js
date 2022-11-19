@@ -14,7 +14,11 @@ const ensureAuth = (req, res, next) => {
                 res.json({isSuccess : false})
             }
         } catch(error) {
-            res.json({message: 'token has been tampered'})
+            if (error instanceof jwt.JsonWebTokenError) {
+                res.status(401).json({isSuccess: false, message: error.message})
+              } else {
+                res.status(401).json({isSuccess: false, message: 'The token sent to the server is invalid 2.'})
+              }
         }
     } else {
         res.json({message: 'TBD'})

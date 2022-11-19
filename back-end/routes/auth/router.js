@@ -1,6 +1,7 @@
 const { User } = require('../../models');
 const router = require('express').Router();
 const jwt = require('jsonwebtoken');
+const { ensureAuth } = require('./ensureAuth');
 
 //creates a token
   const createAuthToken = user => {
@@ -22,10 +23,13 @@ const jwt = require('jsonwebtoken');
     }); 
     if (user) {
       const token = createAuthToken(user)
-      res.json({email, token});
+      res.json({email, isSuccess : true, token});
     }
   });
 
+  router.post('/verify', ensureAuth, (req, res) => {
+    res.json({isSuccess : true})
+  })
 
 
 
