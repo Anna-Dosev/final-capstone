@@ -1,5 +1,6 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
+
 export const fetchUser = createAsyncThunk('users/all', async ({email, password}) => {
   const response = await fetch('http://localhost:8080/auth/login', {
     method: "POST",
@@ -12,7 +13,7 @@ export const fetchUser = createAsyncThunk('users/all', async ({email, password})
   if (data.token) {
     localStorage.setItem('token', data.token)
   }
-  // localStorage.getItem('token')
+
   return data;
 });
 
@@ -20,15 +21,18 @@ export const userSlice = createSlice({
   name: 'user',
   initialState:{},
   reducers: {
-    // login: (state, action) => {
-    //   state.user = action.payload; //user will be updated by payload being passed in
-    // },
+    login: (state, action) => {
+      debugger
+      state.isLoggedIn = action.payload.isSuccess; //user will be updated by payload being passed in
+    },
     // logout: (state) => {
     //   state.user = null;
     // },
   },
   extraReducers(builder) {
     builder.addCase(fetchUser.fulfilled, (state, action) => {
+      // state.isLoggedIn = action.payload.isSuccess;
+      // debugger
       return action.payload;
     });
     builder.addCase(fetchUser.rejected, (state, action) => {

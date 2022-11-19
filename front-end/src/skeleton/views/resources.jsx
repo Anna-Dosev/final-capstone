@@ -1,6 +1,8 @@
 import heroPic from '../../assets/photos/hero.jpg';
+import ecola from '../../assets/photos/ecola.png';
 import SavedItems from '../../components/savedItems.jsx'
 import StateList from '../../components/stateList.jsx'
+import oregonCoastBlog from '../../assets/photos/oregonCoastBlog.png'
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { selectParks, fetchParks } from '../../redux/features/parksSlice';
@@ -56,11 +58,29 @@ const Resources = () => {
               <h1 className="rec-siteName">Adventure Awaits</h1>
             </div>
         </div>
+        <div className="blog-item-container">
+          <div className="blog-item">
+              <div className="blog-item-visual">
+                <img className="blog-image" src={ecola} alt=""/>
+              </div>
+            </div>
+            <div className="blog-item-text">
+              <p className="blog-subtitle-text">
+                <b>Featured:</b> Ecola State Park
+              </p>
+              <p className="blog-content-text">Wrapping around Tillamook Head, between Seaside and Cannon Beach, Ecola State Park stretches along 9 miles of coastline and offers outstanding sightseeing and recreation opportunities combined with a storied past.  
+                Though the scenic and hiking opportunities may be the main allure, the diversity of outdoor recreation including picnicking, tidepooling, surfing and wildlife observation make Ecola State park a destination year round.
+                <br></br><br></br>
+                Sightseeing opportunities begin the moment you enter the park.  The entrance road meanders through a lush Sitka spruce forest, eventually opening up to a grassy bluff offering breathtaking views of the Pacific Ocean.  
+                You may recognize the viewpoint south, a scene from many published photographs.  Sea stacks punctuate the long sweep of shoreline south, backed by the town of Cannon Beach and ridge of coastal mountains above. 
+                <br></br><br></br>
+                <a target="_blank" href="https://stateparks.oregon.gov/index.cfm?do=park.profile&parkId=136">Learn more!</a>
+              </p>
+            </div>
+          </div>
         <div className="np-container">
           <div className="np-search-save-container">
             <div className="np-search-container">
-              <div className="np-search-text">Search National Parks</div>
-              {/* <p className="np-inst-text">Search and save different parks across the U.S.</p> */}
               <div className="np-input-searchbtn">
                 <input className="np-search"type="text"/>
                   <StateList/>
@@ -68,6 +88,8 @@ const Resources = () => {
                   Search
                 </button>
               </div>
+              <p className="np-inst-text">Find parks and places registered through the U.S. National Parks System,
+              and save them for future reference. <br></br><br></br>Happy exploring!</p>
             </div>
             <SavedItems />
           </div>

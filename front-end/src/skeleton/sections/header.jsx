@@ -1,7 +1,11 @@
 import { NavLink } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import { selectIsLoggedIn } from '../../redux/features/isLoggedInSlice';
 import '../../styles/navbarStyles.css';
 
-const Header = ( {data, isLoggedIn }) => {
+const Header = ( {data} ) => {
+  const isLoggedIn = useSelector(selectIsLoggedIn);
+
   const navItems = data.map((navItem) => {
     if (navItem.onLoggedOut === true && !isLoggedIn) { //if navbar item is supposed to show up when user is logged out, and the user is logged out : show 'log in' in nav
       return (

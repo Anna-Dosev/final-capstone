@@ -5,9 +5,13 @@ import hiddenFLBlog from '../../assets/photos/hiddenFLBlog.png'
 import sunriseZionBlog from '../../assets/photos/sunriseZionBlog.png'
 import oregonCoastBlog from '../../assets/photos/oregonCoastBlog.png'
 import { useNavigate } from 'react-router-dom'
+import { useSelector } from 'react-redux';
+import { selectIsLoggedIn } from '../../redux/features/isLoggedInSlice';
 import '../../styles/homeStyles.css';
 
-const Home = ( {isLoggedIn} ) => {
+const Home = () => {
+  const isLoggedIn = useSelector(selectIsLoggedIn);
+
   const navigate = useNavigate();
   const navToRoute = (e) => {
     if (isLoggedIn) {
@@ -17,11 +21,7 @@ const Home = ( {isLoggedIn} ) => {
     }
   }
   const navToBlog = (e) => {
-    // if (isLoggedIn) {
       navigate('/blog'); 
-    // } else if (!isLoggedIn) {
-    //   navigate('/login');
-    // }
   }
     return (
       <div>

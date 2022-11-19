@@ -1,7 +1,10 @@
 import { Routes, Route } from 'react-router-dom';
 import { Home, Blog, Quiz, Routetimeline, Resources, LogOut, LogIn } from '../views';
+import { useSelector } from 'react-redux';
+import { selectIsLoggedIn } from '../../redux/features/isLoggedInSlice';
 
-const Main = ( {isLoggedIn} ) => {
+const Main = () => {
+  const isLoggedIn = useSelector(selectIsLoggedIn);
   
   if(isLoggedIn) {
   return (
@@ -24,7 +27,7 @@ const Main = ( {isLoggedIn} ) => {
           <Route path="/" element={<Home isLoggedIn={isLoggedIn} />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/quiz" element={<Quiz />} />
-          <Route path="/resources" element={<LogIn />} />
+          <Route path="/resources" element={<LogIn />}/>  
           <Route path="/routetimeline" element={<LogIn />} />
           <Route path="/logout" element={<LogOut />} />
           <Route path="/login" element={<LogIn />} />

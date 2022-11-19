@@ -1,11 +1,14 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { login, fetchUser } from '../redux/features/userSlice';
+import { useSelector } from 'react-redux';
+import { selectIsLoggedIn, fetchVerify } from '../redux/features/isLoggedInSlice';
 import Message from './message';
 import Message3 from './message3';
 import '../styles/loginComponentStyles.css'
 
-const Login = ({ setIsLoggedIn }) => {
+const Login = () => {
+  const isLoggedIn = useSelector(selectIsLoggedIn);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState(false);
@@ -30,7 +33,8 @@ const Login = ({ setIsLoggedIn }) => {
     } else if (email === 'XYZ@email.com') { //if someone tries to log in with an email that is not in database
       setMessage3(true);
     } else {
-    dispatch(fetchUser({email, password}))
+      // dispatch(fetchUser({email, password}))
+      dispatch(fetchVerify({token : undefined, email, password}))
     }
     // if (email === '' || password === '') {
     //   setMessage(true);

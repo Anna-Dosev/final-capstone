@@ -1,17 +1,23 @@
 import '../../styles/logoutStyles.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectUser, logout } from '../../redux/features/userSlice'
+import { doLogout } from '../../redux/features/isLoggedInSlice';
+import { useNavigate } from 'react-router-dom'
 
 const LogOut = () => {
-  const user = useSelector(selectUser);
+  // const user = useSelector(selectUser);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+
   const handleLogOut = (e) => {
     e.preventDefault();
-    dispatch(logout());
+    dispatch(doLogout());
+    // let user = JSON.parse(localStorage.getItem('user-info'));
+    localStorage.clear();
+    navigate('/login');
     console.log('logged out')
   };
 
-    return (
+  return (
     <div className="main-logout-container">
       <div className="logout-container-text">
         <h3 className="logout-signup-text">Thank you for visiting!</h3>
@@ -23,7 +29,7 @@ const LogOut = () => {
       </form>
       </div>
     </div>
-      )  
-    };
+    )  
+  };
   
   export default LogOut;
