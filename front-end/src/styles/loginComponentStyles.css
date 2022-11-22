@@ -18,7 +18,8 @@
 .names-input-container {
   display: flex;
   flex-direction: row;
-  width: 100%;
+  width: 95%;
+  margin-left: 10px;
 }
 
 .login-button {

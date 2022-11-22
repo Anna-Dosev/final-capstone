@@ -2,39 +2,23 @@ import heroPic from '../../assets/photos/hero.jpg';
 import ecola from '../../assets/photos/ecola.png';
 import SavedItems from '../../components/savedItems.jsx'
 import StateList from '../../components/stateList.jsx'
-import oregonCoastBlog from '../../assets/photos/oregonCoastBlog.png'
-import { useSelector, useDispatch } from 'react-redux';
-import { useEffect } from 'react';
-import { selectParks, fetchParks } from '../../redux/features/parksSlice';
+import { useState } from 'react';
 import '../../styles/resourcesStyles.css'
 
 const Resources = () => {
-  // const dispatch = useDispatch();
-  // const _parks = useSelector(selectParks);
-
-  // useEffect(() => {
-  //   dispatch(fetchParks());
-  // })
-  // const parks = _parks && _parks.map((park, index) => {
-  //   return (
-  //     <div className="result-item"> 
-  //       <img src={park.images.url}></img>
-  //       <div className="result-item-info"> 
-  //         <p className="result-text">{park.fullName}</p>
-  //       </div>
-  //     </div>
-  //   )
-  //     <li key={index}>{park.fullName}</li>
-  // });
+  const [parks, setParks] = useState();
+  const [q, setQ] = useState('');
+  const [parkInfo, setParkInfo] = useState();
+  const [sc, setSc] = useState();
 
 
-//wasnt sure if the asyncThunk method was draininng my calls; 
-//i commented out the OG code and re-wrote it as if it was a normal api call based on a click. 
-//need to add a handleClick back onto the 'search' btn
-  const fetchParks = async () => {
-    const apiUrl = 'https://jonahtaylor-national-park-service-v1.p.rapidapi.com/parks'
+  const handleQ = (e) => setQ(e.target.value);
+  const handleState = (e) => setSc(e.target.value);
+
+  const getParks = async () => {
+    const apiUrl = `https://jonahtaylor-national-park-service-v1.p.rapidapi.com/parks?limit=10&q=${q}&stateCode=${sc}`
     const response = await fetch(apiUrl, {
-        params: {limit: 5},
+        params: {limit: '10'},
         method: 'GET',
         headers: {
           'X-Api-Key': 'QMo8oekxSdeQBLy4f7uE6Xi3qdaIKbkzfiIPSKfh',
@@ -43,12 +27,24 @@ const Resources = () => {
         }
     });
     const data = await response.json();
-    return data.data;
+    setParks(data.data.map((park, index) => {
+        return (
+          <div className="result-item"> 
+            <img className="result-item-img" src={park.images[0].url}></img>
+            <div className="result-item-info"> 
+              <p className="result-text">{park.name}</p>
+            </div>
+          </div>
+        )
+      })
+    )
+    console.log(data.data);
+    
   };
 
-  // const handleClick = () => {
-  //   console.log(parks)
-  // }
+  const handleClick = () => {
+    console.log(getParks())
+  }
 
     return (
       <div>
@@ -82,9 +78,11 @@ const Resources = () => {
           <div className="np-search-save-container">
             <div className="np-search-container">
               <div className="np-input-searchbtn">
-                <input className="np-search"type="text"/>
-                  <StateList/>
-                <button className="np-submit-button" >
+                <form name="search">
+                  <input className="np-search" type="text" name="np-search" onChange={handleQ}/>
+                  <StateList handleState={handleState}/>
+                </form>
+                <button className="np-submit-button" type="submit" onClick={handleClick}>
                   Search
                 </button>
               </div>
@@ -101,31 +99,7 @@ const Resources = () => {
               <button className="np-submit-button">Save</button>
             </div>
             <div className="result-item-container">
-              {/* <ul>{parks}</ul> */}
-              <div className="result-item"> 
-                <img src={heroPic}></img>
-                <div className="result-item-info"> 
-                  <p className="result-text">Park title</p>
-                </div>
-              </div>
-              <div className="result-item"> 
-                <img src={heroPic}></img>
-                <div className="result-item-info"> 
-                  <p className="result-text">Park title</p>
-                </div>
-              </div>
-              <div className="result-item"> 
-                <img src={heroPic}></img>
-                <div className="result-item-info"> 
-                  <p className="result-text">Park title</p>
-                </div>
-              </div>
-              <div className="result-item"> 
-                <img src={heroPic}></img>
-                <div className="result-item-info"> 
-                  <p className="result-text">Park title</p>
-                </div>
-              </div>
+              {parks}
             </div>
           </div>
         </div>

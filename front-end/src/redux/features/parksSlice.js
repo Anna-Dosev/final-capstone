@@ -1,10 +1,13 @@
-import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+// import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
+
 
 // writing to the store
-export const fetchParks = createAsyncThunk('parks/all', async () => {
+// export const fetchParks = createAsyncThunk('parks/all', async () => {
+  export const fetchParks = async () => {
   const apiUrl = 'https://jonahtaylor-national-park-service-v1.p.rapidapi.com/parks'
   const response = await fetch(apiUrl, {
-      params: {limit: 5},
+      params: {limit: 10},
       method: 'GET',
       headers: {
         'X-Api-Key': 'QMo8oekxSdeQBLy4f7uE6Xi3qdaIKbkzfiIPSKfh',
@@ -13,19 +16,21 @@ export const fetchParks = createAsyncThunk('parks/all', async () => {
       }
   });
   const data = await response.json();
-
+  console.log(data)
   return data.data;
-});
+};
 
 export const parksSlice = createSlice({
   name: 'parks',
   initialState: [],
   reducers: {},
-  extraReducers(builder) {
-    builder.addCase(fetchParks.fulfilled, (state, action) => {
-      return action.payload;
-    });
-  }
+
+
+  // extraReducers(builder) {
+  //   builder.addCase(fetchParks.fulfilled, (state, action) => {
+  //     return action.payload;
+  //   });
+  // }
 });
 
 // reading from the store

@@ -22,17 +22,12 @@ export const userSlice = createSlice({
   initialState:{},
   reducers: {
     login: (state, action) => {
-      debugger
       state.isLoggedIn = action.payload.isSuccess; //user will be updated by payload being passed in
     },
-    // logout: (state) => {
-    //   state.user = null;
-    // },
+
   },
   extraReducers(builder) {
     builder.addCase(fetchUser.fulfilled, (state, action) => {
-      // state.isLoggedIn = action.payload.isSuccess;
-      // debugger
       return action.payload;
     });
     builder.addCase(fetchUser.rejected, (state, action) => {

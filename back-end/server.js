@@ -30,8 +30,13 @@ server.get('/checkAuth/:id', (req, res) => {
 
 
 server.post('/register', async (req, res) => {
+    if (await User.findOne({ where: { email: req.body.email } })) {
+        res.send({ message: "email in use" });
+        return 
+      }
+
     const { firstName, lastName, email, password, newsletter } = req.body;
-    console.log(req.body)
+
     const user = await User.create({
         firstName: firstName,
         lastName: lastName,

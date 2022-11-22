@@ -1,13 +1,15 @@
+import { useState } from 'react';
 
+const StateList = ( {handleState} ) => {
 
-const StateList = () => {
     return (
-        <select className="np-state"type="text">
+        <select onChange={handleState} className="np-state"type="text">
+            <option></option>
             <option>Alabama</option>
             <option>Alaska</option>
             <option>Arizona</option>
             <option>Arkansas</option>
-            <option>California</option>
+            <option>CA</option>
             <option>Colorado</option>
             <option>Connecticut</option>
             <option>Delaware</option>

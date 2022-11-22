@@ -1,8 +1,14 @@
 import Register from '../../components/register';
 import Login from '../../components/login';
+import { useDispatch, useSelector } from 'react-redux';
+import { selectIsLoggedIn } from '../../redux/features/isLoggedInSlice';
+import PostLogIn from '../../components/postLogIn';
 import '../../styles/loginStyles.css';
 
 const LogIn = () => {
+  const isLoggedIn = useSelector(selectIsLoggedIn);
+
+  if (!isLoggedIn) {
     return (
     <div className="main-login-container">
       <div className="login-container-text">
@@ -14,8 +20,11 @@ const LogIn = () => {
         </div>
       </div>
     </div>
-      )  
-    };
+    ) 
+  } else if (isLoggedIn) {
+    return (<PostLogIn/>)
+  }
+  };
   
   export default LogIn;
 

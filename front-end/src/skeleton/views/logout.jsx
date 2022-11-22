@@ -1,17 +1,15 @@
 import '../../styles/logoutStyles.css';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { doLogout } from '../../redux/features/isLoggedInSlice';
 import { useNavigate } from 'react-router-dom'
 
 const LogOut = () => {
-  // const user = useSelector(selectUser);
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const handleLogOut = (e) => {
     e.preventDefault();
     dispatch(doLogout());
-    // let user = JSON.parse(localStorage.getItem('user-info'));
     localStorage.clear();
     navigate('/login');
     console.log('logged out')

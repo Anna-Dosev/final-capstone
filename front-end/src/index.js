@@ -8,7 +8,7 @@ import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const token = localStorage.getItem('token');
-const isLoggedIn = store.dispatch(fetchVerify(token))
+const isLoggedIn = store.dispatch(fetchVerify({token}))
 
 root.render(
   <React.StrictMode>
