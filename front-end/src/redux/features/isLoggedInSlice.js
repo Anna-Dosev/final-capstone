@@ -1,6 +1,8 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
 export const fetchVerify = createAsyncThunk('users/verify', async (creds) => {
+  if(!creds.email) return
+  
   const { email, password, token } = creds;
   if(token) {
     const response = await fetch('http://localhost:8080/auth/verify', {

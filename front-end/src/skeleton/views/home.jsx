@@ -37,7 +37,7 @@ const Home = () => {
             </div>
             <div className="about-container-text">
               <h1 className="welcome-text">Hi there!</h1>
-              <p className="intro-text">My name is Anna, and I am a roadtrip extraordinaire and aspiring full-stack web developer.
+              <p className="intro-text">My name is Anna, and I am a roadtripper extraordinaire and aspiring full-stack web developer.
                   I spent the last six months driving across the United States while working remotely.
                   To add to the fun, I was also enrolled in a web development course and created this site as my final capstone project. 
               </p>

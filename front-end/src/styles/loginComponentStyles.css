@@ -7,19 +7,35 @@
   background-color: transparent;
 }
 
+.input-container {
+text-align: left;
+}
+
 .info-field {
   padding: 10px;
   border: none;
   border-radius: 10px;
   margin: 5px;
   width: 90%;
-  font-size: .70rem;
+  font-size: .90rem;
 }
+
 .names-input-container {
   display: flex;
   flex-direction: row;
-  width: 95%;
-  margin-left: 10px;
+}
+
+.name-field {
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  margin: 5px;
+  width: 50%;
+  font-size: .90rem;
+}
+
+.ep-input-container {
+  width: 100%;
 }
 
 .login-button {

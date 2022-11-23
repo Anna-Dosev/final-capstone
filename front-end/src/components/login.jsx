@@ -4,7 +4,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { selectIsLoggedIn, fetchVerify } from '../redux/features/isLoggedInSlice';
 import Message from './message';
 import Message3 from './message3';
-import PostLogIn from './postLogIn';
 import '../styles/loginComponentStyles.css'
 
 const Login = () => {
@@ -13,7 +12,6 @@ const Login = () => {
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState(false);
   const [message3, setMessage3] = useState(false);
-  const [postLogIn, setPostLogIn] = useState(false);
   const dispatch = useDispatch();
 
   const handleChange3 = (e) => {
@@ -26,16 +24,16 @@ const Login = () => {
     setPassword(inputVal);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (email === '' || password === '') {
       setMessage(true);
-    } else if (email === 'XYZ@email.com') { //if someone tries to log in with an email that is not in database
+    } else if (email == undefined) { //if someone tries to log in with an email that is not in database
       setMessage3(true);
     } else {
       dispatch(fetchVerify({token : undefined, email, password}))
-      setPostLogIn(<PostLogIn/>)
+  
     }
 
 }
@@ -62,7 +60,7 @@ const Login = () => {
         Log In
       </button>
       {message && <Message />}
-      {message3 && <Message3 />}
+      {message3 && !isLoggedIn && <Message3 />}
     </form>
   );
 };

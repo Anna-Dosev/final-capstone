@@ -3,6 +3,7 @@ const express = require('express');
 const cors = require('cors');
 const { User } = require('./models');
 const path = require('path');
+const jwt = require('jsonwebtoken');
 const server = express();
 
 const { authRouter, resourcesRouter } = require('./routes');
@@ -27,7 +28,16 @@ server.post('/', (req, res) => {
 server.get('/checkAuth/:id', (req, res) => {
     res.json({"isAuthenticated" : true})
   })  
+  
 
+const createAuthToken = user => {
+    return jwt.sign({user}, 'config.JWT_SECRET', {
+        subject: user.email,
+        // expiresIn: config.JWT_EXPIRY,
+        expiresIn: 18600,
+        algorithm: 'HS256'
+    });
+  };
 
 server.post('/register', async (req, res) => {
     if (await User.findOne({ where: { email: req.body.email } })) {
@@ -44,8 +54,10 @@ server.post('/register', async (req, res) => {
         password: password,
         newsletter: newsletter
     }); 
+    const token = createAuthToken(user)
+    res.json({email, isSuccess : true, token});
+
     console.log(user)
-    res.send(user);
 });
 
 

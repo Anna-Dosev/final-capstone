@@ -5,6 +5,8 @@ import StateList from '../../components/stateList.jsx'
 import { useState } from 'react';
 import '../../styles/resourcesStyles.css'
 
+const {REACT_APP_KEY} = process.env
+
 const Resources = () => {
   const [parks, setParks] = useState();
   const [q, setQ] = useState('');
@@ -15,36 +17,39 @@ const Resources = () => {
   const handleQ = (e) => setQ(e.target.value);
   const handleState = (e) => setSc(e.target.value);
 
+
   const getParks = async () => {
     const apiUrl = `https://jonahtaylor-national-park-service-v1.p.rapidapi.com/parks?limit=10&q=${q}&stateCode=${sc}`
     const response = await fetch(apiUrl, {
         params: {limit: '10'},
         method: 'GET',
         headers: {
-          'X-Api-Key': 'QMo8oekxSdeQBLy4f7uE6Xi3qdaIKbkzfiIPSKfh',
+          'X-Api-Key': REACT_APP_KEY,
           'X-RapidAPI-Key': '5a61fdea5cmsh897482afa700670p1c35bajsnf5b82c3a86de',
           'X-RapidAPI-Host': 'jonahtaylor-national-park-service-v1.p.rapidapi.com'
         }
     });
     const data = await response.json();
+
     setParks(data.data.map((park, index) => {
         return (
           <div className="result-item"> 
             <img className="result-item-img" src={park.images[0].url}></img>
             <div className="result-item-info"> 
-              <p className="result-text">{park.name}</p>
+              <p onClick={() => setParkInfo(park)} className="result-text">{park.name}</p>
             </div>
           </div>
         )
       })
-    )
+    );
     console.log(data.data);
-    
+  
   };
 
-  const handleClick = () => {
-    console.log(getParks())
+  const handleClick1 = () => {
+    (getParks())
   }
+
 
     return (
       <div>
@@ -54,11 +59,9 @@ const Resources = () => {
               <h1 className="rec-siteName">Adventure Awaits</h1>
             </div>
         </div>
-        <div className="blog-item-container">
-          <div className="blog-item">
-              <div className="blog-item-visual">
-                <img className="blog-image" src={ecola} alt=""/>
-              </div>
+        <div className="blog-item-container-2">
+          <div className="blog-item-2">
+              <img className="blog-image-2" src={ecola} alt=""/>
             </div>
             <div className="blog-item-text">
               <p className="blog-subtitle-text">
@@ -82,7 +85,7 @@ const Resources = () => {
                   <input className="np-search" type="text" name="np-search" onChange={handleQ}/>
                   <StateList handleState={handleState}/>
                 </form>
-                <button className="np-submit-button" type="submit" onClick={handleClick}>
+                <button className="np-submit-button" type="submit" onClick={getParks}>
                   Search
                 </button>
               </div>
@@ -93,10 +96,12 @@ const Resources = () => {
           </div>
           <div className="results-container">
             <div className="result-info-container">
-              <div className="np-search-text">Insert selected Park Name - default?</div>
+              {parkInfo && <>
+              <div className="np-search-text">{parkInfo.fullName}</div>
               <p className="np-inst-text">insert subtitle text about park</p>
-              <p className="np-inst-text">insert images and other np info from api</p>
+              <p className="np-inst-text">{parkInfo.description}</p>
               <button className="np-submit-button">Save</button>
+              </>}
             </div>
             <div className="result-item-container">
               {parks}

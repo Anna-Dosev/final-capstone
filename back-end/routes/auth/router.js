@@ -24,6 +24,8 @@ const { ensureAuth } = require('./ensureAuth');
     if (user) {
       const token = createAuthToken(user)
       res.json({email, isSuccess : true, token});
+    } else {
+      res.json({message: 'no user found'})
     }
   });
 

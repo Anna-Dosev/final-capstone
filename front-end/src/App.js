@@ -10,7 +10,6 @@ function App() {
 
   const user = useSelector(selectUser);
   const isLoggedIn = useSelector(selectIsLoggedIn);
-  // const isLoggedIn = !!user.email
   console.log('a', isLoggedIn)
 
   return (
