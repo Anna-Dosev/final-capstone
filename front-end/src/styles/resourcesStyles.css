@@ -55,7 +55,7 @@
 .np-search-container {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 60%;
     padding: 10px;
 }
 
@@ -162,8 +162,8 @@ letter-spacing: 0.15em;
     display: flex;
     flex-direction: row; 
     padding: 30px 10px;
-    /* background-color: rgba(232,224,213,1); */
     width: 100%;
+    /* overflow-y: scroll; */
 }
 
 .result-info-container {
@@ -216,6 +216,11 @@ letter-spacing: 0.15em;
     font-weight: lighter;
     letter-spacing: 0.15em;
     /* position: relative; */
+}
+
+.parkInfo-img {
+    height: 115px;
+    width: 175px;
 }
 
 /* ******* MEDIA QUERIES ******* */

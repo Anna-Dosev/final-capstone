@@ -215,4 +215,33 @@
         transition: transform .3s;
         margin-bottom: 10px;
     }
+}
+
+@media only screen and (max-width: 930px) {
+    .about-container {
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(232,224,213,1);
+        align-items: center;
     }
+
+    .about-container-image {
+        border: 10px solid white;
+        border-radius: 10px;
+        max-height: 200px;
+        max-width: 150px;
+        margin: 15px;
+    }
+
+    .about-container-text {
+        margin: auto;
+        max-width: 80%;
+    }
+
+    .about-container-login {
+        width:80%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+    }
+}

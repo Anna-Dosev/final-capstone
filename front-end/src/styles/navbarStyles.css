@@ -15,5 +15,16 @@ padding: 45px;
 overflow: hidden;
 }
 
+@media only screen and (max-width: 885px) {
+    .navbar-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navbar {
+        padding: 0;
+        text-align: center;
+    }
+}
 
   
