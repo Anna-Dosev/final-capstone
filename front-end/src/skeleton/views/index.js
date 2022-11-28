@@ -1,7 +1,7 @@
 import Home from './home';
 import Blog from './blog';
 import Quiz from './quiz';
-import { Routetimeline } from './routetimeline';
+import { Routetimeline } from './routetimeline2';
 import Resources from './resources';
 import LogOut from './logout';
 import LogIn from './login';
