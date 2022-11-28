@@ -15,6 +15,7 @@ const { ensureAuth } = require('./ensureAuth');
 
   router.post('/login', async (req, res) => {
     const { email, password, } = req.body;
+    console.log(email, password)
     const user = await User.findOne({
       where: {
         email: email,
@@ -25,7 +26,8 @@ const { ensureAuth } = require('./ensureAuth');
       const token = createAuthToken(user)
       res.json({email, isSuccess : true, token});
     } else {
-      res.json({message: 'no user found'})
+      // res.json({message: 'no user found'})
+      res.status(401).json({isSuccess : false})
     }
   });
 
