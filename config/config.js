@@ -1,4 +1,13 @@
-{
+const {
+  PG_DATABASE,
+  PG_HOST,
+  PG_PASSWORD,
+  PG_PORT,
+  PG_USER
+} = process.env;
+
+
+module.exports = { 
   "development": {
     "username": "admin",
     "password": "admin",
@@ -14,10 +23,11 @@
     "dialect": "postgres"
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "capstone-prod",
-    "host": "127.0.0.1",
-    "dialect": "postgres"
+    "username": PG_USER,
+    "password": PG_PASSWORD,
+    "database": PG_DATABASE,
+    "host": PG_HOST,
+    "dialect": "postgres",
+    "port": PG_PORT
   }
 }
