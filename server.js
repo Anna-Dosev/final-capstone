@@ -6,7 +6,7 @@ const { User } = require('./models');
 const path = require('path');
 const jwt = require('jsonwebtoken');
 const server = express();
-const { PORT } = process.env.PORT;
+const { PORT } = process.env;
 
 const { authRouter, resourcesRouter } = require('./routes');
 // const ( regRouter ) = require('./routes');
@@ -15,17 +15,20 @@ server.use(cors({ origin: (orig, cb) => cb(null, true), credentials: true }));
 
 //server.use(express.static(path.resolve))
 server.use(express.json());
+server.use(express.static(path.resolve(`${__dirname}/front-end/build`)));
 server.use('/auth', authRouter);
 server.use('/resources', resourcesRouter);
+
+
 // server.use('/registrants', regRouter);
 
-server.get('/', (req, res) => {
-    res.sendFile('./index.html') //wat dis?
-});
+// server.get('/', (req, res) => {
+//     res.sendFile('./index.html') //wat dis?
+// });
 
-server.post('/', (req, res) => {
-    //console.log(req.body)
-});
+// server.post('/', (req, res) => {
+//     //console.log(req.body)
+// });
 
 server.get('/checkAuth/:id', (req, res) => {
     res.json({"isAuthenticated" : true})
@@ -61,6 +64,11 @@ server.post('/register', async (req, res) => {
 
     console.log(user)
 });
+
+//delegate client-side routing to react
+server.get('*', (req, res) => {
+    res.sendFile(path.resolve(`${__dirname}/front-end/build/index.html`));
+  });
 
 
 server.listen(PORT, () => {
