@@ -1,3 +1,4 @@
+require('dotenv').config();
 const passport = require('passport');
 const express = require('express');
 const cors = require('cors');
@@ -5,6 +6,7 @@ const { User } = require('./models');
 const path = require('path');
 const jwt = require('jsonwebtoken');
 const server = express();
+const { PORT } = process.env.PORT;
 
 const { authRouter, resourcesRouter } = require('./routes');
 // const ( regRouter ) = require('./routes');
@@ -61,6 +63,6 @@ server.post('/register', async (req, res) => {
 });
 
 
-server.listen(8080, () => {
+server.listen(PORT, () => {
     console.log('The server is running at port 8080')
 });
