@@ -64,5 +64,5 @@ server.post('/register', async (req, res) => {
 
 
 server.listen(PORT, () => {
-    console.log('The server is running at port 8080')
+    console.log(`The server is listening at ${PORT}`)
 });
