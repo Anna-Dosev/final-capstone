@@ -1,9 +1,11 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
-export const fetchVerify = createAsyncThunk('users/verify', async (creds) => {
-  if(!creds.email) return
+export const fetchVerify = createAsyncThunk('users/verify', async (creds, { rejectWithValue }) => {
+  
   
   const { email, password, token } = creds;
+  
+
   if(token) {
     const response = await fetch('http://localhost:8080/auth/verify', {
       method: "POST",
@@ -13,8 +15,8 @@ export const fetchVerify = createAsyncThunk('users/verify', async (creds) => {
           },
     });
     const data = await response.json();
-    return data.isSuccess;
-  } else {
+    return data.isSuccess ? 2 : 0;
+  } else if (email && password) {
     const response = await fetch('http://localhost:8080/auth/login', {
     method: "POST",
         body: JSON.stringify({ email, password }), 
@@ -25,23 +27,26 @@ export const fetchVerify = createAsyncThunk('users/verify', async (creds) => {
   const data = await response.json();
   if (data.token) {
     localStorage.setItem('token', data.token)
+    // return data.isSuccess;
+    return 2;
   }
-  return data.isSuccess;
+  // return data.isSuccess;
+  return rejectWithValue('There is a problem')
   }
 })
 
 export const isLoggedInSlice = createSlice({
     name: 'isLoggedIn',
-    initialState: false,
+    initialState: 0,
     reducers: {
-      doLogout: (state) => false,
+      doLogout: (state) => 0,
     },
     extraReducers(builder) {
         builder.addCase(fetchVerify.fulfilled, (state, action) => {
           return action.payload;
         });
         builder.addCase(fetchVerify.rejected, (state, action) => {
-          return action.payload;
+          return 1;
         });
       }
   });

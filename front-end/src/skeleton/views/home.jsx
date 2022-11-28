@@ -14,9 +14,9 @@ const Home = () => {
 
   const navigate = useNavigate();
   const navToRoute = (e) => {
-    if (isLoggedIn) {
+    if (isLoggedIn === 2) {
       navigate('/routetimeline');
-    } else if (!isLoggedIn) {
+    } else if (!isLoggedIn || isLoggedIn === 1) {
       navigate('/login');
     }
   }

@@ -89,18 +89,23 @@ const Resources = () => {
                   Search
                 </button>
               </div>
-              <p className="np-inst-text">Find parks and places registered through the U.S. National Parks System,
-              and save them for future reference. <br></br><br></br>Happy exploring!</p>
+              <p className="np-inst-text">Find parks and places registered through the U.S. National Parks System.
+             <br></br><br></br>Happy exploring!</p>
             </div>
-            <SavedItems />
+            {/* <SavedItems /> */}
           </div>
           <div className="results-container">
             <div className="result-info-container">
               {parkInfo && <>
               <div className="np-search-text">{parkInfo.fullName}</div>
-              <p className="np-inst-text">insert subtitle text about park</p>
+              <p className="np-inst-text">{parkInfo.designation}</p>
               <p className="np-inst-text">{parkInfo.description}</p>
-              <button className="np-submit-button">Save</button>
+              <a href={parkInfo.url} target="_blank" >Learn More</a>
+              <br></br> <br></br>
+              <img className="parkInfo-img" src={parkInfo.images[1].url}></img>
+              <img className="parkInfo-img" src={parkInfo.images[2].url}></img>
+              <img className="parkInfo-img" src={parkInfo.images[3].url}></img>
+            
               </>}
             </div>
             <div className="result-item-container">

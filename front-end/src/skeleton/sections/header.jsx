@@ -7,11 +7,11 @@ const Header = ( {data} ) => {
   const isLoggedIn = useSelector(selectIsLoggedIn);
 
   const navItems = data.map((navItem) => {
-    if (navItem.onLoggedOut === true && !isLoggedIn) { //if navbar item is supposed to show up when user is logged out, and the user is logged out : show 'log in' in nav
+    if ((navItem.onLoggedOut === true && !isLoggedIn) || (navItem.onLoggedOut === true && isLoggedIn === 1)) { //if navbar item is supposed to show up when user is logged out, and the user is logged out : show 'log in' in nav
       return (
           <NavLink className="navbar" to={navItem.href} key={navItem.id}>{navItem.text}</NavLink>
       )
-    } else if (navItem.onLoggedIn === true && isLoggedIn) { //if navbar item is supposed to show when user is logged in, and the user is logged in : show 'log out' in nav
+    } else if (navItem.onLoggedIn === true && isLoggedIn === 2) { //if navbar item is supposed to show when user is logged in, and the user is logged in : show 'log out' in nav
       return (
           <NavLink className="navbar" to={navItem.href} key={navItem.id}>{navItem.text}</NavLink>
       )

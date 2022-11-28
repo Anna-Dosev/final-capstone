@@ -6,7 +6,7 @@ import { selectIsLoggedIn } from '../../redux/features/isLoggedInSlice';
 const Main = () => {
   const isLoggedIn = useSelector(selectIsLoggedIn);
   
-  if(isLoggedIn) {
+  if(isLoggedIn === 2) {
   return (
     <main>
       <Routes>
@@ -20,7 +20,7 @@ const Main = () => {
       </Routes>
     </main>
   );
-  } else if (!isLoggedIn) {
+  } else if (!isLoggedIn || isLoggedIn === 1) {
     return (
       <main>
         <Routes>

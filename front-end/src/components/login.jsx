@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 // import { login, fetchUser } from '../redux/features/userSlice';
 import { selectIsLoggedIn, fetchVerify } from '../redux/features/isLoggedInSlice';
@@ -13,6 +13,11 @@ const Login = () => {
   const [message, setMessage] = useState(false);
   const [message3, setMessage3] = useState(false);
   const dispatch = useDispatch();
+  // useEffect(()=> {
+  //   if (isLoggedIn === 1) {
+  //     setMessage3(true)
+  //   }
+  // })
 
   const handleChange3 = (e) => {
     const inputVal = e.target.value;
@@ -29,11 +34,8 @@ const Login = () => {
 
     if (email === '' || password === '') {
       setMessage(true);
-    } else if (email == undefined) { //if someone tries to log in with an email that is not in database
-      setMessage3(true);
     } else {
       dispatch(fetchVerify({token : undefined, email, password}))
-  
     }
 
 }
@@ -60,7 +62,7 @@ const Login = () => {
         Log In
       </button>
       {message && <Message />}
-      {message3 && !isLoggedIn && <Message3 />}
+      {isLoggedIn === 1 && <Message3 />}
     </form>
   );
 };

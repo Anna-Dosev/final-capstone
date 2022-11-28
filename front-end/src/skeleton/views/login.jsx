@@ -8,7 +8,7 @@ import '../../styles/loginStyles.css';
 const LogIn = () => {
   const isLoggedIn = useSelector(selectIsLoggedIn);
 
-  if (!isLoggedIn) {
+  if (!isLoggedIn || isLoggedIn === 1) {
     return (
     <div className="main-login-container">
       <div className="login-container-text">
@@ -21,10 +21,10 @@ const LogIn = () => {
       </div>
     </div>
     ) 
-  } else if (isLoggedIn) {
+  } else if (isLoggedIn === 2) {
     return (<PostLogIn/>)
-  }
-  };
+  } 
+};
   
   export default LogIn;
 
