@@ -18,4 +18,4 @@ const Routetimeline = () => {
     );
   };
   
-  export default Routetimeline;
+  export { Routetimeline };
