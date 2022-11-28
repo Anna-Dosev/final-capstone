@@ -50,7 +50,7 @@ const Register = () => {
     } else {
       setMessage(false);
     console.log(firstName, lastName, email, password, newsletter)
-      fetch("http://localhost:8080/register", {
+      fetch("/register", {
         method: "POST",
         body: JSON.stringify({ firstName, lastName, email, password, newsletter }), 
         headers: {

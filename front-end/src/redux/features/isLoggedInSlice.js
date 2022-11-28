@@ -7,7 +7,7 @@ export const fetchVerify = createAsyncThunk('users/verify', async (creds, { reje
   
 
   if(token) {
-    const response = await fetch('http://localhost:8080/auth/verify', {
+    const response = await fetch('/auth/verify', {
       method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -17,7 +17,7 @@ export const fetchVerify = createAsyncThunk('users/verify', async (creds, { reje
     const data = await response.json();
     return data.isSuccess ? 2 : 0;
   } else if (email && password) {
-    const response = await fetch('http://localhost:8080/auth/login', {
+    const response = await fetch('/auth/login', {
     method: "POST",
         body: JSON.stringify({ email, password }), 
         headers: {

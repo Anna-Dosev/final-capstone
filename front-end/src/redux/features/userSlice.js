@@ -2,7 +2,7 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
 
 export const fetchUser = createAsyncThunk('users/all', async ({email, password}) => {
-  const response = await fetch('http://localhost:8080/auth/login', {
+  const response = await fetch('/auth/login', {
     method: "POST",
         body: JSON.stringify({ email, password }), 
         headers: {
