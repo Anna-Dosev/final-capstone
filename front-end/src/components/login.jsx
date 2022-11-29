@@ -54,6 +54,7 @@ const Login = () => {
         <input className="info-field"
           value={password}
           onChange={handleChange4}
+          type="password"
           name="password"
           placeholder="PASSWORD"
         ></input>
