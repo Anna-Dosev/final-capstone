@@ -31,7 +31,8 @@ const Resources = () => {
     });
     const data = await response.json();
 
-    setParks(data.data.map((park, index) => {
+    data && data.data && setParks(data.data.map((park, index) => {
+    // setParks(data.data.map((park, index) => {
         return (
           <div className="result-item"> 
             <img className="result-item-img" src={park.images[0].url}></img>
