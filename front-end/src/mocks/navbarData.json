@@ -31,22 +31,14 @@
       "onLoggedIn": true,
       "onLoggedOut": true,
       "text": "Route"
-    },
+    }, 
     {
-      "className": "navs__secondary",
-      "href": "/logout",
+      "className": "navs__primary",
+      "href": "/test",
       "id": 6,
       "onLoggedIn": true,
-      "onLoggedOut": false,
-      "text": "Log Out"
-    },
-    {
-      "className": "navs__secondary",
-      "href": "/login",
-      "id": 7,
-      "onLoggedIn": false,
       "onLoggedOut": true,
-      "text": "Log In"
+      "text": "Test"
     }
   ]
   

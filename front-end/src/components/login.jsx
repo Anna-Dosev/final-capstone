@@ -69,3 +69,21 @@ const Login = () => {
 };
 
 export default Login;
+
+//the code below was removed from the navbarData.json file in order to remove login/logout functionlity from the nav bar
+//     {
+//       "className": "navs__secondary",
+//       "href": "/logout",
+//       "id": 6,
+//       "onLoggedIn": true,
+//       "onLoggedOut": false,
+//       "text": "Log Out"
+//     },
+//     {
+//       "className": "navs__secondary",
+//       "href": "/login",
+//       "id": 7,
+//       "onLoggedIn": false,
+//       "onLoggedOut": true,
+//       "text": "Log In"
+//     }

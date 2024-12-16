@@ -63,12 +63,11 @@
 }
 
 .blog-title-text {
-    /* color: #32384d; */
     font-family: sans-serif;
     font-size: 1.5rem;
     font-weight: lighter;
     letter-spacing: 0.15em;
-    color: white;
+    color: ivory;
 }
 
 .blog-item-text {
