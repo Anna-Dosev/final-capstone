@@ -40,6 +40,8 @@
   text-align: center;
   cursor: pointer;
   transition: transform 0.3s;
+  flex-basis: calc(33.33% - 20px);
+  margin-bottom: 50px;
 }
 
 .explore-item:hover {
