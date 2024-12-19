@@ -1,44 +1,43 @@
 [
-    {
-      "className": "navs__primary",
-      "href": "/",
-      "id": 1,
-      "onLoggedIn": true,
-      "onLoggedOut": true,
-      "text": "Home"
-    },
-    {
-      "className": "navs__secondary",
-      "href": "/blog",
-      "id": 2,
-      "onLoggedIn": true,
-      "onLoggedOut": true,
-      "text": "Blog"
-    },
-  
-    {
-      "className": "navs__secondary",
-      "href": "/resources",
-      "id": 4,
-      "onLoggedIn": true,
-      "onLoggedOut": true,
-      "text": "Resources"
-    },
-    {
-      "className": "navs__secondary",
-      "href": "/routetimeline",
-      "id": 5,
-      "onLoggedIn": true,
-      "onLoggedOut": true,
-      "text": "Route"
-    }, 
-    {
-      "className": "navs__primary",
-      "href": "/test",
-      "id": 6,
-      "onLoggedIn": true,
-      "onLoggedOut": true,
-      "text": "Test"
-    }
-  ]
-  
+  {
+    "className": "navs__primary",
+    "href": "/",
+    "id": 1,
+    "onLoggedIn": true,
+    "onLoggedOut": true,
+    "text": "Home"
+  },
+  {
+    "className": "navs__secondary",
+    "href": "/blog",
+    "id": 2,
+    "onLoggedIn": true,
+    "onLoggedOut": true,
+    "text": "Blog"
+  },
+
+  {
+    "className": "navs__secondary",
+    "href": "/resources",
+    "id": 4,
+    "onLoggedIn": true,
+    "onLoggedOut": true,
+    "text": "Resources"
+  },
+  {
+    "className": "navs__secondary",
+    "href": "/about",
+    "id": 5,
+    "onLoggedIn": true,
+    "onLoggedOut": true,
+    "text": "About"
+  },
+  {
+    "className": "navs__primary",
+    "href": "/test",
+    "id": 6,
+    "onLoggedIn": true,
+    "onLoggedOut": true,
+    "text": "Test"
+  }
+]

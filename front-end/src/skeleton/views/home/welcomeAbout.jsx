@@ -13,7 +13,7 @@ const WelcomeAbout = () => {
         <p className="intro-text">
           Hi, I'm Anna, an adventure enthusiast based in Salt Lake City.
           Throughout the years working remotely as a QA Engineer, I've gained a
-          keen interest in web development and content creation.
+          keen interest in web development and visual storytelling.
           <br></br>
           <br></br>
           Originally created as a capstone project for a full-stack web
@@ -24,7 +24,7 @@ const WelcomeAbout = () => {
           <br></br>
           Built with React, Node, JSX, HTML and CSS
           <br></br>
-          Deployed via Railway
+          Deployed via Railway (eventually)
         </p>
       </div>
       <div className="logo-container">

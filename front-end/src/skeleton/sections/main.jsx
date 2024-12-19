@@ -4,18 +4,19 @@
 // import { selectIsLoggedIn } from '../../redux/features/isLoggedInSlice';
 
 //the code below was suggested by perplexity in order to remove login/logout functionlity
-import { Routes, Route } from 'react-router-dom';
-import { Home, Blog, Quiz, Routetimeline, Resources, Test } from '../views';
+import { Routes, Route } from "react-router-dom";
+import { Home, Blog, About, Resources, Test } from "../views";
+import BlogA from "../views/blogs/blogA";
 const Main = () => {
   return (
     <main>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/blog" element={<Blog />} />
-        {/* <Route path="/quiz" element={<Quiz />} /> */}
         <Route path="/resources" element={<Resources />} />
-        <Route path="/routetimeline" element={<Routetimeline />} />
+        <Route path="/about" element={<About />} />
         <Route path="/test" element={<Test />} />
+        <Route path="/blogA" element={<BlogA />} />
       </Routes>
     </main>
   );
@@ -25,7 +26,7 @@ export default Main;
 
 // const Main = () => {
 //   const isLoggedIn = useSelector(selectIsLoggedIn);
-  
+
 //   if(isLoggedIn === 2) {
 //   return (
 //     <main>
@@ -47,7 +48,7 @@ export default Main;
 //           <Route path="/" element={<Home isLoggedIn={isLoggedIn} />} />
 //           <Route path="/blog" element={<Blog />} />
 //           <Route path="/quiz" element={<Quiz />} />
-//           {/* <Route path="/resources" element={<LogIn />}/>  
+//           {/* <Route path="/resources" element={<LogIn />}/>
 //           <Route path="/routetimeline" element={<LogIn />} />
 //           <Route path="/logout" element={<LogOut />} />
 //           <Route path="/login" element={<LogIn />} /> */}
@@ -55,7 +56,7 @@ export default Main;
 //           <Route path="/routetimeline" element={<Routetimeline />} />
 //           <Route path="/logout" element={<LogOut />} />
 //           <Route path="/login" element={<LogIn />} />
-          
+
 //         </Routes>
 //       </main>
 //     )
@@ -63,4 +64,3 @@ export default Main;
 // };
 
 // export default Main;
-

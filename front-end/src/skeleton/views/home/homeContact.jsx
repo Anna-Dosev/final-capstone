@@ -4,9 +4,7 @@ import "../../../styles/contactStyles.css";
 
 const HomeContact = () => {
   const navigate = useNavigate();
-  const navToRoute = () => {
-    navigate("/routetimeline");
-  };
+
   return (
     <div className="contact-container">
       <div className="contact-form">

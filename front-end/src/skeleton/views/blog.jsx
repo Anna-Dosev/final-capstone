@@ -13,8 +13,8 @@ import oregonCoastBlog from "../../assets/photos/oregonCoastBlog.png";
 import highway395Blog from "../../assets/photos/highway395Blog.png";
 import logo from "../../assets/photos/logo2.png";
 import altaBlog from "../../assets/photos/altaBlog.png";
-import "../../styles/blogStyles.css";
 import "../../styles/blogStyles/blogHeroStyles.css";
+import "../../styles/blogStyles/blogSignUpStyles.css";
 
 const Blog = () => {
   const navigate = useNavigate();
@@ -34,28 +34,71 @@ const Blog = () => {
       </div>
       <div className="blog-container">
         <div className="blog-item-container">
-          <div className="blog-item" onClick={() => navToBlog("blogA")}>
-            <img className="blog-image" src={oregonCoastBlog} alt="" />
+          <div className="blog-item">
+            <img
+              className="blog-image"
+              onClick={() => navToBlog("blogA")}
+              src={oregonCoastBlog}
+              alt=""
+            />
             <h3 className="blog-item-text">The Oregon Coast</h3>
           </div>
-          <div className="blog-item" onClick={() => navToBlog("blogB")}>
-            <img className="blog-image" src={lakeColchuck} alt="" />
+          <div className="blog-item">
+            <img
+              className="blog-image"
+              onClick={() => navToBlog("blogB")}
+              src={lakeColchuck}
+              alt=""
+            />
             <h3 className="blog-item-text">Lake Colchuck</h3>
           </div>
-          <div className="blog-item" onClick={() => navToBlog("blogC")}>
-            <img className="blog-image" src={devilsCastle} alt="" />
+          <div className="blog-item">
+            <img
+              className="blog-image"
+              onClick={() => navToBlog("blogC")}
+              src={devilsCastle}
+              alt=""
+            />
             <h3 className="blog-item-text">Devil's Castle</h3>
           </div>
-          <div className="blog-item" onClick={() => navToBlog("blogD")}>
-            <img className="blog-image" src={oregonCoastBlog} alt="" />
+        </div>
+        <div className="sign-up-container">
+          <p className="sign-up-text">
+            Ready to explore? Sign up for email alerts and unlock access to our
+            newest travel guides.
+          </p>
+          <div className="sign-up-form">
+            <input type="text" placeholder="Name" className="sign-up-input" />
+            <input type="email" placeholder="Email" className="sign-up-input" />
+            <button className="sign-up-button">Sign Up</button>
+          </div>
+        </div>
+        <div className="blog-item-container">
+          <div className="blog-item">
+            <img
+              className="blog-image"
+              onClick={() => navToBlog("blogD")}
+              src={oregonCoastBlog}
+              alt=""
+            />
             <h3 className="blog-item-text">Hidden Florida</h3>
           </div>
-          <div className="blog-item" onClick={() => navToBlog("blogE")}>
-            <img className="blog-image" src={lakeColchuck} alt="" />
+          <div className="blog-item">
+            <img
+              className="blog-image"
+              onClick={() => navToBlog("blogE")}
+              src={lakeColchuck}
+              alt=""
+            />
             <h3 className="blog-item-text">Zion</h3>
           </div>
-          <div className="blog-item" onClick={() => navToBlog("blogF")}>
-            <img className="blog-image" src={devilsCastle} alt="" />
+          <div className="blog-item">
+            <img
+              className="blog-image"
+              onClick={() => navToBlog("blogF")}
+              src={devilsCastle}
+              alt=""
+            />
             <h3 className="blog-item-text">395 North</h3>
           </div>
         </div>

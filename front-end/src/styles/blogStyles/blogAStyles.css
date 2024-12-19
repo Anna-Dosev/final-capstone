@@ -1,0 +1,58 @@
+.parent-container {
+  position: relative; /* Make this a positioned container */
+  padding-bottom: 60px;
+}
+
+.main-content-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative; /* Change to relative */
+  z-index: 1; /* Ensure it's below the logo banner */
+  width: 85%;
+  margin-top: -100px; /* Adjust as needed */
+  margin-left: 6%;
+  margin-right: auto;
+  gap: 20px;
+}
+
+.image-content-container {
+  flex: 0 0 auto;
+  border: 10px solid ivory;
+  transform: rotate(7deg);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.text-blurb-content-container {
+  flex: 1;
+}
+
+.blogAImage {
+  max-width: 100%;
+  height: auto;
+}
+
+.blurb {
+  font-size: 1.15rem;
+  color: #453e45;
+  letter-spacing: 0.15em;
+  line-height: 1.5rem;
+  background-color: rgb(194, 209, 231);
+  padding: 15px;
+  border-radius: 8px;
+}
+.remaining-text {
+  font-size: 1.15rem;
+  color: #453e45;
+  letter-spacing: 0.15em;
+  line-height: 2rem;
+}
+
+/* Logo Banner Styles */
+.blogA-logo-banner {
+  position: absolute; /* Position it absolutely within parent */
+  bottom: -400px; /* Adjust this value as needed to position it correctly above the bottom edge */
+  left: calc(50% - (15%));
+  width: 30%;
+}
