@@ -1,0 +1,36 @@
+.about-hero-container-image {
+  height: 600px;
+  width: 100%;
+  margin-bottom: 25px;
+  overflow: hidden;
+  position: relative;
+}
+
+.about-heroPic {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  opacity: 60%;
+  transform: scaleX(-1) translateY(-400px);
+  position: relative;
+}
+
+/* Page title and subtitle styles found in blog hero styles file*/
+
+.about-text-blurb-content-container {
+  flex: 1;
+  font-family: sans-serif;
+  display: flex;
+  align-items: flex-start;
+}
+
+.blurb-about {
+  font-size: 1.15rem;
+  color: #453e45;
+  letter-spacing: 0.15em;
+  line-height: 1.5rem;
+  background-color: rgb(194, 209, 231);
+  padding: 15px;
+  border-radius: 8px;
+  width: 60%;
+}
