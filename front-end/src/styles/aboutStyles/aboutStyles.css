@@ -17,13 +17,30 @@
 
 /* Page title and subtitle styles found in blog hero styles file*/
 
-.about-text-blurb-content-container {
+.text-blurb-content-container {
   flex: 1;
   font-family: sans-serif;
-  display: flex;
-  align-items: flex-start;
 }
 
+.began-text-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.how-it-began {
+  color: #32384d;
+  font-family: "Apple Chancery", cursive;
+  font-size: 3.5rem;
+  letter-spacing: 0.15em;
+}
+
+.began-remaining-text {
+  font-size: 1.15rem;
+  color: #453e45;
+  letter-spacing: 0.15em;
+  line-height: 2rem;
+}
 .blurb-about {
   font-size: 1.15rem;
   color: #453e45;
