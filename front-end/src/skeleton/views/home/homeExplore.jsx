@@ -10,6 +10,9 @@ const HomeExplore = () => {
   const navToBlog = () => {
     navigate("/blog");
   };
+  const navToBlogA = () => {
+    navigate("/blogA");
+  };
 
   return (
     <div className="explore-container">
@@ -21,17 +24,17 @@ const HomeExplore = () => {
         </p>
       </div>
       <div className="explore-item-container">
-        <div className="explore-item" onClick={navToBlog}>
+        <div className="explore-item" onClick={navToBlogA}>
           <img className="explore-image" src={oregonCoastBlog} alt="" />
           <h3 className="explore-item-text">The Oregon Coast</h3>
         </div>
         <div className="explore-item" onClick={navToBlog}>
           <img className="explore-image" src={sunriseZionBlog} alt="" />
-          <h3 className="explore-item-text">Sunrise at Zion</h3>
+          <h3 className="explore-item-text">Southern Utah</h3>
         </div>
         <div className="explore-item" onClick={navToBlog}>
           <img className="explore-image" src={hiddenFLBlog} alt="" />
-          <h3 className="explore-item-text">Hidden Florida</h3>
+          <h3 className="explore-item-text">Florida's Hidden Gems</h3>
         </div>
       </div>
     </div>

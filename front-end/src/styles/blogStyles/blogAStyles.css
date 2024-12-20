@@ -26,6 +26,7 @@
 
 .text-blurb-content-container {
   flex: 1;
+  font-family: sans-serif;
 }
 
 .blogAImage {

@@ -2,9 +2,7 @@ import { useNavigate } from "react-router-dom";
 
 const Blog1 = () => {
   const navigate = useNavigate();
-  // const navToPhotos = (e) => {
-  //     navigate('/routetimeline');
-  // }
+
   return (
     <div className="blog-content-text">
       Northern, coastal Oregon has a reputation for maintaining permanent cloud
@@ -27,9 +25,6 @@ const Blog1 = () => {
       snowboarding in the same day.
       <br></br>
       <br></br>
-      {/* <p className="nav-to-photos" onClick={navToPhotos}>
-        More photos from the Pacific Northwest{" "}
-      </p> */}
     </div>
   );
 };

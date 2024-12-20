@@ -2,9 +2,7 @@ import { useNavigate } from "react-router-dom";
 
 const Blog2 = () => {
   const navigate = useNavigate();
-  // const navToPhotos = (e) => {
-  //     navigate('/routetimeline');
-  // }
+
   return (
     <div className="blog-content-text">
       Very little can prepare you for the grandeur of Zion National Park. Even
@@ -30,9 +28,6 @@ const Blog2 = () => {
       hour to myself before the shuttle crowds arrived.
       <br></br>
       <br></br>
-      {/* <p className="nav-to-photos" onClick={navToPhotos}>
-        More photos from Zion
-      </p> */}
     </div>
   );
 };

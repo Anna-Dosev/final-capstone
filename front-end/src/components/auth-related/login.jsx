@@ -1,15 +1,18 @@
-import { useState, useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useState, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 // import { login, fetchUser } from '../redux/features/userSlice';
-import { selectIsLoggedIn, fetchVerify } from '../redux/features/isLoggedInSlice';
-import Message from './message';
-import Message3 from './message3';
-import '../styles/loginComponentStyles.css'
+import {
+  selectIsLoggedIn,
+  fetchVerify,
+} from "../../redux/features/isLoggedInSlice";
+import Message from "./message";
+import Message3 from "./message3";
+import "../../styles/authStyles/loginComponentStyles.css";
 
 const Login = () => {
   const isLoggedIn = useSelector(selectIsLoggedIn);
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [message, setMessage] = useState(false);
   const [message3, setMessage3] = useState(false);
   const dispatch = useDispatch();
@@ -25,33 +28,33 @@ const Login = () => {
   };
   const handleChange4 = (e) => {
     const inputVal = e.target.value;
-    console.log(inputVal)
+    console.log(inputVal);
     setPassword(inputVal);
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (email === '' || password === '') {
+    if (email === "" || password === "") {
       setMessage(true);
     } else {
-      dispatch(fetchVerify({token : undefined, email, password}))
+      dispatch(fetchVerify({ token: undefined, email, password }));
     }
-
-}
-  
+  };
 
   return (
     <form className="login-container" onSubmit={handleSubmit}>
       <div className="input-container">
-        <input className="info-field"
+        <input
+          className="info-field"
           value={email}
           onChange={handleChange3}
           type="email"
           name="email"
           placeholder="EMAIL"
         ></input>
-        <input className="info-field"
+        <input
+          className="info-field"
           value={password}
           onChange={handleChange4}
           type="password"

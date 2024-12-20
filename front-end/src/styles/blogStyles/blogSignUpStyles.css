@@ -13,9 +13,10 @@
   flex: 1;
   font-size: 1.15rem;
   color: #453e45;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.12em;
   line-height: 1.5rem;
   text-align: left;
+  /* font-family: sans-serif; */
 }
 
 .sign-up-form {

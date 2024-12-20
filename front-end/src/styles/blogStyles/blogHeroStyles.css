@@ -74,6 +74,7 @@
   box-shadow: 0 0 5px #453e45;
   margin: 0 auto;
   cursor: pointer;
+  object-fit: cover;
 }
 .blog-image:hover {
   margin: auto;

@@ -39,23 +39,21 @@
   margin: auto;
   text-align: center;
   cursor: pointer;
-  transition: transform 0.3s;
+  /* transition: transform 0.3s; */
   flex-basis: calc(33.33% - 20px);
   margin-bottom: 50px;
-}
-
-.explore-item:hover {
-  margin: auto;
-  border-radius: 50%;
-  cursor: pointer;
-  -webkit-transform: scale(1.03);
 }
 
 .explore-image {
   height: 350px;
   width: 350px;
   border-radius: 50%;
-  box-shadow: 0 0 10px #453e45;
+  box-shadow: 0 0 7px #453e45;
+}
+
+.explore-image:hover {
+  cursor: pointer;
+  box-shadow: 0 0 20px #453e45;
 }
 
 .explore-item-text {

@@ -1,7 +1,7 @@
-import '../../styles/logoutStyles.css';
-import { useDispatch } from 'react-redux';
-import { doLogout } from '../../redux/features/isLoggedInSlice';
-import { useNavigate } from 'react-router-dom'
+import "../../styles/authStyles/logoutStyles.css";
+import { useDispatch } from "react-redux";
+import { doLogout } from "../../../redux/features/isLoggedInSlice";
+import { useNavigate } from "react-router-dom";
 
 const LogOut = () => {
   const dispatch = useDispatch();
@@ -11,8 +11,8 @@ const LogOut = () => {
     e.preventDefault();
     dispatch(doLogout());
     localStorage.clear();
-    navigate('/login');
-    console.log('logged out')
+    navigate("/login");
+    console.log("logged out");
   };
 
   return (
@@ -24,10 +24,10 @@ const LogOut = () => {
           <button type="submit" className="logout-button">
             Log Out
           </button>
-      </form>
+        </form>
       </div>
     </div>
-    )  
-  };
-  
-  export default LogOut;
+  );
+};
+
+export default LogOut;
