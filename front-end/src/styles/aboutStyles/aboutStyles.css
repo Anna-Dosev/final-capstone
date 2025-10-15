@@ -1,65 +1,183 @@
 .about-hero-container-image {
-  height: 600px;
-  width: 100%;
-  margin-bottom: 25px;
-  overflow: hidden;
-  position: relative;
+    height: 600px;
+    width: 100%;
+    margin-bottom: 25px;
+    overflow: hidden;
+    position: relative;
 }
 
 .about-heroPic {
-  object-fit: cover;
-  width: 100%;
-  height: auto;
-  opacity: 60%;
-  transform: scaleX(-1) translateY(-400px);
-  position: relative;
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+    opacity: 60%;
+    transform: scaleX(-1) translateY(-400px);
+    position: relative;
 }
 
 /* Page title and subtitle styles found in blog hero styles file*/
 
+.main-content-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
 .text-blurb-content-container {
-  flex: 1;
-  font-family: sans-serif;
+    flex: 1;
+    font-family: sans-serif;
 }
 
 .float-text-container {
-  margin-top: 5px;
-  overflow: hidden; /* Clearfix for floated elements */
+    margin-top: 5px;
+    overflow: hidden; /* Clearfix for floated elements */
 }
 
 .began-text-container {
-  float: left;
-  margin-right: 20px; /* Adjust as needed for spacing */
-  margin-top: 10px;
+    float: left;
+    margin-right: 20px; /* Adjust as needed for spacing */
+    margin-top: 10px;
 }
 
 .how-it-began {
-  color: #32384d;
-  font-family: "Apple Chancery", cursive;
-  font-size: 3.5rem;
-  letter-spacing: 0.15em;
-  margin: 0; /* Removes default margins */
+    color: #32384d;
+    font-family: "Apple Chancery", cursive;
+    font-size: 3.5rem;
+    letter-spacing: 0.15em;
+    margin: 0; /* Removes default margins */
 }
 
 .began-remaining-text {
-  font-size: 1.15rem;
-  color: #453e45;
-  letter-spacing: 0.15em;
-  line-height: 2rem;
+    font-size: 1.15rem;
+    color: #453e45;
+    letter-spacing: 0.15em;
+    line-height: 2rem;
 }
+
+.remaining-text {
+    font-size: 1.15rem;
+    color: #453e45;
+    letter-spacing: 0.15em;
+    line-height: 2rem;
+    margin-bottom: 20px;
+}
+
 .blurb-about {
-  font-size: 1.15rem;
-  color: #453e45;
-  letter-spacing: 0.15em;
-  line-height: 1.5rem;
-  background-color: rgb(194, 209, 231);
-  padding: 15px;
-  border-radius: 8px;
-  width: 60%;
-  margin-bottom: 15px;
+    font-size: 1.15rem;
+    color: #453e45;
+    letter-spacing: 0.15em;
+    line-height: 1.5rem;
+    background-color: rgb(194, 209, 231);
+    padding: 15px;
+    border-radius: 8px;
+    width: 60%;
+    margin-bottom: 15px;
 }
+
 .began-remaining-text::after {
-  content: "";
-  display: block;
-  clear: both;
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* Mobile Responsive Styles */
+@media only screen and (max-width: 768px) {
+    .about-hero-container-image {
+        height: 400px;
+        margin-bottom: 20px;
+    }
+
+    .about-heroPic {
+        transform: scaleX(-1) translateY(-200px);
+    }
+
+    .main-content-container {
+        padding: 0 15px;
+    }
+
+    .text-blurb-content-container {
+        padding: 20px 0;
+    }
+
+    .float-text-container {
+        margin-top: 20px;
+    }
+
+    .began-text-container {
+        float: none;
+        margin-right: 0;
+        margin-top: 0;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .how-it-began {
+        font-size: 2.5rem;
+        letter-spacing: 0.1em;
+        text-align: center;
+    }
+
+    .began-remaining-text {
+        font-size: 1rem;
+        line-height: 1.6;
+        text-align: justify;
+        margin-bottom: 20px;
+    }
+
+    .remaining-text {
+        font-size: 1rem;
+        line-height: 1.6;
+        text-align: justify;
+        margin-bottom: 20px;
+    }
+
+    .blurb-about {
+        width: 100%;
+        font-size: 1rem;
+        line-height: 1.6;
+        padding: 20px;
+        text-align: justify;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .about-hero-container-image {
+        height: 350px;
+    }
+
+    .about-heroPic {
+        transform: scaleX(-1) translateY(-150px);
+    }
+
+    .main-content-container {
+        padding: 0 10px;
+    }
+
+    .text-blurb-content-container {
+        padding: 15px 0;
+    }
+
+    .how-it-began {
+        font-size: 2rem;
+        letter-spacing: 0.05em;
+    }
+
+    .began-remaining-text {
+        font-size: 0.9rem;
+        line-height: 1.5;
+        letter-spacing: 0.05em;
+    }
+
+    .remaining-text {
+        font-size: 0.9rem;
+        line-height: 1.5;
+        letter-spacing: 0.05em;
+    }
+
+    .blurb-about {
+        font-size: 0.9rem;
+        line-height: 1.5;
+        padding: 15px;
+        letter-spacing: 0.05em;
+    }
 }

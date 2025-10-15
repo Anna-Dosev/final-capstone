@@ -1,6 +1,8 @@
-
 .route-container {
     margin: 15px;
+    max-width: 1200px;
+    margin: 15px auto;
+    padding: 0 20px;
 }
 
 .route-header {
@@ -18,16 +20,21 @@
     width: 50%;
     margin: auto;
     padding-bottom: 15px;
+    gap: 15px;
+    justify-content: center;
 }
 
 .info-box {
     border: 2px solid #bababa;
-    background-color: #96A6BF;
+    background-color: #96a6bf;
     color: white;
     margin: auto;
     padding: 30px;
     font-weight: lighter;
     letter-spacing: 0.15em;
+    text-align: center;
+    border-radius: 8px;
+    flex: 1;
 }
 
 .cities-list {
@@ -45,6 +52,7 @@
     align-items: center;
     margin: auto;
     width: fit-content;
+    max-width: 100%;
 }
 
 .map-elements {
@@ -58,7 +66,7 @@
 .map-keys {
     display: flex;
     flex-direction: row;
-    padding: 15px;  
+    padding: 15px;
     align-items: center;
 }
 
@@ -78,8 +86,8 @@
     font-size: 1.25rem;
 }
 
-.main-timeline{ 
-    position: relative; 
+.main-timeline {
+    position: relative;
     margin: 0 15px;
 }
 
@@ -90,19 +98,141 @@
 }
 
 @media only screen and (max-width: 1185px) {
- 
-.map-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    .map-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
+/* Enhanced Mobile Responsiveness */
+@media only screen and (max-width: 768px) {
+    .route-container {
+        padding: 0 15px;
+        margin: 10px auto;
+    }
+
+    .route-header {
+        font-size: 2rem;
+        letter-spacing: 0.1em;
+        margin-bottom: 20px;
+    }
+
+    .route-info-boxes {
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+        padding-bottom: 20px;
+    }
+
+    .info-box {
+        padding: 20px;
+        margin: 0;
+        font-size: 0.9rem;
+        letter-spacing: 0.1em;
+    }
+
+    .cities-list {
+        width: 95%;
+        font-size: 0.9rem;
+        line-height: 1.4;
+        text-align: justify;
+    }
+
+    .map-container {
+        flex-direction: column;
+        padding: 0 10px;
+        width: 100%;
+    }
+
+    .map-elements {
+        width: 100%;
+        padding: 15px 5px;
+    }
+
+    .map-keys {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .map-text {
+        width: 100%;
+        padding: 15px 0;
+        font-size: 0.9rem;
+        line-height: 1.4;
+        text-align: justify;
+    }
+
+    .gallery-subtitle {
+        font-size: 1rem;
+        padding: 15px;
+        letter-spacing: 0.15em;
+    }
+
+    .main-timeline {
+        margin: 0 10px;
+    }
+
+    .gallery-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .route-container {
+        padding: 0 10px;
+        margin: 5px auto;
+    }
+
+    .route-header {
+        font-size: 1.5rem;
+        letter-spacing: 0.05em;
+        margin-bottom: 15px;
+    }
+
+    .info-box {
+        padding: 15px;
+        font-size: 0.8rem;
+        letter-spacing: 0.05em;
+    }
+
+    .cities-list {
+        width: 100%;
+        font-size: 0.8rem;
+        line-height: 1.3;
+    }
+
+    .map-elements {
+        padding: 10px 0;
+    }
+
+    .map-keys {
+        padding: 8px;
+    }
+
+    .map-text {
+        font-size: 0.8rem;
+        line-height: 1.3;
+        padding: 10px 0;
+    }
+
+    .gallery-subtitle {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    .main-timeline {
+        margin: 0 5px;
+    }
 }
 
 @media only screen and (max-width: 700px) {
-.route-info-boxes {
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 15px;
-}
+    .route-info-boxes {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 15px;
+    }
 }
