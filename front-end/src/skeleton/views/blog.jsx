@@ -58,7 +58,7 @@ const Blog = () => {
           </div>
         </div>
         <div className="sign-up-container">
-          <p className="sign-up-text">
+          {/* <p className="sign-up-text">
             Ready to explore? Sign up for email alerts and unlock access to our
             newest travel guides.
           </p>
@@ -66,34 +66,34 @@ const Blog = () => {
             <input type="text" placeholder="Name" className="sign-up-input" />
             <input type="email" placeholder="Email" className="sign-up-input" />
             <button className="sign-up-button">Sign Up</button>
-          </div>
+          </div>*/}
         </div>
         <div className="blog-item-container">
           <div className="blog-item">
-            <img
-              className="blog-image"
-              onClick={() => navToBlog("blogD")}
-              src={hiddenFL}
-              alt=""
-            />
+            <div className="blog-image-container">
+              <img className="blog-image" src={hiddenFL} alt="" />
+              <div className="coming-soon-overlay">
+                <h3>Coming Soon</h3>
+              </div>
+            </div>
             <h3 className="blog-item-text">Hidden Florida</h3>
           </div>
           <div className="blog-item">
-            <img
-              className="blog-image"
-              onClick={() => navToBlog("blogE")}
-              src={sunriseZion}
-              alt=""
-            />
-            <h3 className="blog-item-text">Zion</h3>
+            <div className="blog-image-container">
+              <img className="blog-image" src={sunriseZion} alt="" />
+              <div className="coming-soon-overlay">
+                <h3>Coming Soon</h3>
+              </div>
+            </div>
+            <h3 className="blog-item-text">Sunrise in Zion</h3>
           </div>
           <div className="blog-item">
-            <img
-              className="blog-image"
-              onClick={() => navToBlog("blogF")}
-              src={highway395}
-              alt=""
-            />
+            <div className="blog-image-container">
+              <img className="blog-image" src={highway395} alt="" />
+              <div className="coming-soon-overlay">
+                <h3>Coming Soon</h3>
+              </div>
+            </div>
             <h3 className="blog-item-text">395 North</h3>
           </div>
         </div>

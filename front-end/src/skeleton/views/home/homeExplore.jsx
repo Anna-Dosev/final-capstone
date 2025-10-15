@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import hiddenFLBlog from "../../../assets/photos/hiddenFLBlog.png";
-import sunriseZionBlog from "../../../assets/photos/sunriseZionBlog.png";
+import colchuckBlog from "../../../assets/photos/pnw/pnw13.png";
+import castleBlog from "../../../assets/photos/utah/castle2.png";
 import oregonCoastBlog from "../../../assets/photos/oregonCoastBlog.png";
 import "../../../styles/homeStyles/exploreStyles.css";
 
@@ -12,6 +13,13 @@ const HomeExplore = () => {
   };
   const navToBlogA = () => {
     navigate("/blogA");
+  };
+  const navToBlogB = () => {
+    navigate("/blogB");
+  };
+
+  const navToBlogC = () => {
+    navigate("/blogC");
   };
 
   return (
@@ -28,13 +36,13 @@ const HomeExplore = () => {
           <img className="explore-image" src={oregonCoastBlog} alt="" />
           <h3 className="explore-item-text">The Oregon Coast</h3>
         </div>
-        <div className="explore-item" onClick={navToBlog}>
-          <img className="explore-image" src={sunriseZionBlog} alt="" />
-          <h3 className="explore-item-text">Southern Utah</h3>
+        <div className="explore-item" onClick={navToBlogC}>
+          <img className="explore-image" src={castleBlog} alt="" />
+          <h3 className="explore-item-text">Devil's Castle</h3>
         </div>
-        <div className="explore-item" onClick={navToBlog}>
-          <img className="explore-image" src={hiddenFLBlog} alt="" />
-          <h3 className="explore-item-text">Florida's Hidden Gems</h3>
+        <div className="explore-item" onClick={navToBlogB}>
+          <img className="explore-image" src={colchuckBlog} alt="" />
+          <h3 className="explore-item-text">Lake Colchuck</h3>
         </div>
       </div>
     </div>

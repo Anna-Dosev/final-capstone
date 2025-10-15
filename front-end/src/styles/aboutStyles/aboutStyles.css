@@ -22,10 +22,15 @@
   font-family: sans-serif;
 }
 
+.float-text-container {
+  margin-top: 5px;
+  overflow: hidden; /* Clearfix for floated elements */
+}
+
 .began-text-container {
-  display: flex;
-  align-items: center;
-  gap: 15px;
+  float: left;
+  margin-right: 20px; /* Adjust as needed for spacing */
+  margin-top: 10px;
 }
 
 .how-it-began {
@@ -33,6 +38,7 @@
   font-family: "Apple Chancery", cursive;
   font-size: 3.5rem;
   letter-spacing: 0.15em;
+  margin: 0; /* Removes default margins */
 }
 
 .began-remaining-text {
@@ -50,4 +56,10 @@
   padding: 15px;
   border-radius: 8px;
   width: 60%;
+  margin-bottom: 15px;
+}
+.began-remaining-text::after {
+  content: "";
+  display: block;
+  clear: both;
 }

@@ -16,23 +16,19 @@ const About = () => {
         <img className="about-heroPic" src={heroPic2} alt="" />
         <div className="blog-hero-text-container">
           <h1 className="blog-siteName">My Story</h1>
-          <p className="blog-subtitle">Subtitle TBD</p>
+          <p className="blog-subtitle">Coding my way around the U.S.A.</p>
         </div>
       </div>
       <div className="main-content-container">
         <div className="text-blurb-content-container">
           <p className="blurb-about">
-            Eventually I will write something here. Was mainly focused on
-            layout.
-            <br></br>
-            <br></br>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+            During the uncertainty of the 2020 COVID-19 pandemic, I made the
+            decision to pursue a career change—a choice that ultimately led me
+            to discover a path I am truly passionate about. I joined a tech team
+            with no prior technical experience and immersed myself in learning
+            both on the job and through continuous self-study. Embracing the
+            remote work lifestyle enabled me to travel extensively across the
+            United States while growing professionally and personally.
             <br></br>
           </p>
           <div className="float-text-container">
@@ -40,23 +36,32 @@ const About = () => {
               <h1 className="how-it-began">How it all Began</h1>
             </div>
             <p className="began-remaining-text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
+              After several years working as a writer and editor, I realized my
+              passion for learning technical skills was growing stronger. After
+              a bit of luck, opportunity, and preparation, I was able to
+              transfer internally into our tech department, starting as a manual
+              QA tester. Within a year and a half, I completed a full-stack
+              development course, which provided the foundation I needed to
+              begin writing automated tests.
             </p>
           </div>
           <p className="remaining-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+            During the course, the stars aligned for my best friend and me to
+            hop into my little Hyundai Elantra and embark on a cross-country
+            road trip. What was planned as a two-week journey turned into four
+            months on the road, covering 19 states and creating countless
+            memories. We worked, studied, and explored full-time, seizing every
+            adventure that came our way.
+          </p>
+
+          <p className="remaining-text">
+            While my interest in technical skills grew stronger, so did my love
+            for the western United States. After safely returning home from the
+            road trip—and a few promotions—I made the permanent move west as an
+            SDET. I spent a year in Utah, followed by an extended stay in
+            Washington, and now I proudly call San Diego home. Of course, the
+            road ahead is full of possibilities—who knows where the next
+            adventure will take me!
           </p>
         </div>
       </div>

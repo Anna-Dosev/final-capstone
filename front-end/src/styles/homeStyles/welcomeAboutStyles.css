@@ -3,10 +3,10 @@
   flex-direction: row;
   background-color: rgba(232, 224, 213, 1);
   width: 70%;
-  margin: 0 auto;
   overflow: visible;
   min-height: 400px;
   padding: 50px 0;
+  margin: -100px auto auto auto;
 }
 
 .intro-pic-container {

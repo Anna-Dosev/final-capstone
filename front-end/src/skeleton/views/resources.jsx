@@ -5,7 +5,7 @@ import StateList from "../../components/stateList.jsx";
 import { useState } from "react";
 import "../../styles/resourcesStyles.css";
 
-const { REACT_APP_KEY } = process.env;
+const REACT_APP_KEY = import.meta.env.VITE_APP_KEY;
 
 const Resources = () => {
   const [parks, setParks] = useState();
@@ -45,7 +45,7 @@ const Resources = () => {
               </div>
             </div>
           );
-        })
+        }),
       );
     console.log(data.data);
   };

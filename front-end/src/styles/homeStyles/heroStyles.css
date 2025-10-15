@@ -4,6 +4,7 @@
   margin-bottom: 25px;
   overflow: hidden;
   position: relative;
+  z-index: -1;
 }
 
 .heroPic {
