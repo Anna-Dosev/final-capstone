@@ -5,6 +5,7 @@ import castle from "../../../assets/photos/utah/castle.png";
 import logo from "../../../assets/photos/logo2.png";
 import "../../../styles/blogStyles/blogCStyles.css";
 import "../../../styles/blogStyles/blogHeroStyles.css";
+import "../../../styles/blogStyles/blogSharedMobile.css";
 // import "../../../styles/blogStyles/blogSignUpStyles.css";
 
 const BlogB = () => {

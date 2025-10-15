@@ -1,0 +1,197 @@
+/* Shared Mobile Styles for All Blog Pages (A, B, C) */
+
+/* Pre-footer spacing adjustments */
+.pre-footer {
+    height: 50px;
+    clear: both;
+}
+
+/* Shared parent container mobile adjustments */
+@media only screen and (max-width: 768px) {
+    .pre-footer {
+        height: 20px;
+    }
+
+    /* Ensure all blog pages have consistent mobile spacing */
+    .parent-container {
+        padding: 0 10px 40px 10px !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
+    }
+
+    /* Consistent main content container for all blog pages */
+    .main-content-container {
+        flex-direction: column !important;
+        align-items: center !important;
+        width: 95% !important;
+        margin: -50px auto 0 auto !important;
+        gap: 30px !important;
+        padding: 0 5px;
+    }
+
+    /* Consistent image container styling */
+    .image-content-container {
+        width: 280px !important;
+        height: 350px !important;
+        transform: rotate(0deg) !important;
+        border: 5px solid ivory !important;
+        margin: 0 auto !important;
+        flex-shrink: 0;
+    }
+
+    /* Ensure images fit properly in mobile containers */
+    .blogAImage,
+    .blogBImage,
+    .blogCImage {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+    }
+
+    /* Consistent text container styling */
+    .text-blurb-content-container {
+        width: 100% !important;
+        text-align: justify !important;
+        padding: 0 !important;
+    }
+
+    /* Consistent blurb styling across all blog pages */
+    .blurb {
+        font-size: 1rem !important;
+        line-height: 1.6 !important;
+        padding: 20px !important;
+        letter-spacing: 0.1em !important;
+        text-align: justify !important;
+        margin-bottom: 20px !important;
+    }
+
+    /* Consistent remaining text styling */
+    .remaining-text {
+        font-size: 1rem !important;
+        line-height: 1.6 !important;
+        letter-spacing: 0.1em !important;
+        text-align: justify !important;
+        margin-bottom: 20px !important;
+    }
+
+    /* Consistent logo banner positioning */
+    .blogA-logo-banner {
+        position: static !important;
+        width: 50% !important;
+        margin: 30px auto 0 auto !important;
+        text-align: center !important;
+    }
+
+    .blogAlogo {
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    /* Enhanced readability for mobile */
+    .remaining-text b {
+        display: block;
+        margin: 15px 0 10px 0;
+        color: #32384d;
+        font-weight: 600;
+    }
+
+    /* Better list formatting in blog content */
+    .remaining-text br + br {
+        display: block;
+        content: "";
+        margin-top: 10px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .pre-footer {
+        height: 15px;
+    }
+
+    .parent-container {
+        padding: 0 5px 30px 5px !important;
+    }
+
+    .main-content-container {
+        margin: -30px auto 0 auto !important;
+        gap: 20px !important;
+        padding: 0 2px;
+    }
+
+    .image-content-container {
+        width: 250px !important;
+        height: 300px !important;
+        border: 3px solid ivory !important;
+    }
+
+    .blurb {
+        font-size: 0.9rem !important;
+        line-height: 1.5 !important;
+        padding: 15px !important;
+        letter-spacing: 0.05em !important;
+    }
+
+    .remaining-text {
+        font-size: 0.9rem !important;
+        line-height: 1.5 !important;
+        letter-spacing: 0.05em !important;
+    }
+
+    .blogA-logo-banner {
+        width: 60% !important;
+        margin: 20px auto 0 auto !important;
+    }
+
+    /* Tighter spacing for very small screens */
+    .text-blurb-content-container {
+        padding: 0 5px !important;
+    }
+}
+
+/* Landscape orientation adjustments for mobile */
+@media only screen and (max-width: 768px) and (orientation: landscape) {
+    .main-content-container {
+        margin: -30px auto 0 auto !important;
+    }
+
+    .image-content-container {
+        width: 240px !important;
+        height: 300px !important;
+    }
+}
+
+/* Accessibility improvements for mobile blog reading */
+@media (prefers-reduced-motion: reduce) {
+    .image-content-container {
+        transform: none !important;
+    }
+}
+
+/* Dark mode support for blog content */
+@media (prefers-color-scheme: dark) {
+    .blurb {
+        background-color: rgba(150, 166, 191, 0.8) !important;
+        color: #ffffff !important;
+    }
+
+    .remaining-text {
+        color: #e0e0e0 !important;
+    }
+}
+
+/* Performance optimizations for mobile blog pages */
+.blogAImage,
+.blogBImage,
+.blogCImage {
+    will-change: auto;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+/* Touch-friendly improvements */
+@media (pointer: coarse) {
+    .text-blurb-content-container {
+        user-select: text;
+        -webkit-user-select: text;
+    }
+}

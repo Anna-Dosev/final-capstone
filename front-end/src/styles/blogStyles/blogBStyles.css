@@ -1,63 +1,157 @@
 .parent-container {
-  position: relative; /* Make this a positioned container */
-  padding-bottom: 60px;
+    position: relative;
+    padding-bottom: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .main-content-container {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  position: relative; /* Change to relative */
-  z-index: 1; /* Ensure it's below the logo banner */
-  width: 85%;
-  margin-top: -100px; /* Adjust as needed */
-  margin-left: 6%;
-  margin-right: auto;
-  gap: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    z-index: 1;
+    width: 85%;
+    margin-top: -100px;
+    margin-left: 6%;
+    margin-right: auto;
+    gap: 20px;
 }
 
 .image-content-container {
-  flex: 0 0 auto;
-  border: 10px solid ivory;
-  transform: rotate(7deg);
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  width: 400px; /* Set a fixed width */
-  height: 500px; /* Set a fixed height */
-  overflow: hidden; /* Hide overflow */
+    flex: 0 0 auto;
+    border: 10px solid ivory;
+    transform: rotate(7deg);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 400px;
+    height: 500px;
+    overflow: hidden;
 }
 
 .text-blurb-content-container {
-  flex: 1;
-  font-family: sans-serif;
+    flex: 1;
+    font-family: sans-serif;
 }
 
 .blogBImage {
-  max-width: 100%;
-  height: auto;
-  object-fit: cover; /* Maintain aspect ratio and cover container */
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
 .blurb {
-  font-size: 1.15rem;
-  color: #453e45;
-  letter-spacing: 0.15em;
-  line-height: 1.5rem;
-  background-color: rgb(194, 209, 231);
-  padding: 15px;
-  border-radius: 8px;
+    font-size: 1.15rem;
+    color: #453e45;
+    letter-spacing: 0.15em;
+    line-height: 1.5rem;
+    background-color: rgb(194, 209, 231);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
 }
+
 .remaining-text {
-  font-size: 1.15rem;
-  color: #453e45;
-  letter-spacing: 0.15em;
-  line-height: 2rem;
+    font-size: 1.15rem;
+    color: #453e45;
+    letter-spacing: 0.15em;
+    line-height: 2rem;
+    margin-bottom: 20px;
 }
 
 /* Logo Banner Styles */
 .blogA-logo-banner {
-  position: absolute; /* Position it absolutely within parent */
-  bottom: -400px; /* Adjust this value as needed to position it correctly above the bottom edge */
-  left: calc(50% - (15%));
-  width: 30%;
+    position: absolute;
+    bottom: -400px;
+    left: calc(50% - (15%));
+    width: 30%;
+}
+
+.blogAlogo {
+    width: 100%;
+    height: auto;
+}
+
+/* Mobile Responsive Styles */
+@media only screen and (max-width: 768px) {
+    .parent-container {
+        padding: 0 10px 40px 10px;
+    }
+
+    .main-content-container {
+        flex-direction: column;
+        align-items: center;
+        width: 95%;
+        margin: -50px auto 0 auto;
+        gap: 30px;
+    }
+
+    .image-content-container {
+        width: 280px;
+        height: 350px;
+        transform: rotate(0deg);
+        border: 5px solid ivory;
+        margin: 0 auto;
+    }
+
+    .text-blurb-content-container {
+        width: 100%;
+        text-align: justify;
+    }
+
+    .blurb {
+        font-size: 1rem;
+        line-height: 1.6;
+        padding: 20px;
+        letter-spacing: 0.1em;
+        text-align: justify;
+    }
+
+    .remaining-text {
+        font-size: 1rem;
+        line-height: 1.6;
+        letter-spacing: 0.1em;
+        text-align: justify;
+    }
+
+    .blogA-logo-banner {
+        position: static;
+        width: 50%;
+        margin: 30px auto 0 auto;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .parent-container {
+        padding: 0 5px 30px 5px;
+    }
+
+    .main-content-container {
+        margin: -30px auto 0 auto;
+        gap: 20px;
+    }
+
+    .image-content-container {
+        width: 250px;
+        height: 300px;
+    }
+
+    .blurb {
+        font-size: 0.9rem;
+        line-height: 1.5;
+        padding: 15px;
+        letter-spacing: 0.05em;
+    }
+
+    .remaining-text {
+        font-size: 0.9rem;
+        line-height: 1.5;
+        letter-spacing: 0.05em;
+    }
+
+    .blogA-logo-banner {
+        width: 60%;
+        margin: 20px auto 0 auto;
+    }
 }

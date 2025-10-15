@@ -6,6 +6,7 @@ import logo from "../../../assets/photos/logo2.png";
 import "../../../styles/blogStyles/blogBStyles.css";
 import "../../../styles/blogStyles/blogHeroStyles.css";
 import "../../../styles/blogStyles/blogSignUpStyles.css";
+import "../../../styles/blogStyles/blogSharedMobile.css";
 
 const BlogB = () => {
   const navigate = useNavigate();
