@@ -42,7 +42,7 @@ const HomeExplore = () => {
         </div>
         <div className="explore-item" onClick={navToBlogB}>
           <img className="explore-image" src={colchuckBlog} alt="" />
-          <h3 className="explore-item-text">Lake Colchuck</h3>
+          <h3 className="explore-item-text">Colchuck Lake</h3>
         </div>
       </div>
     </div>

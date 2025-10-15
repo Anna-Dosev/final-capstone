@@ -13,7 +13,7 @@ const isLoggedIn = store.dispatch(fetchVerify({ token }));
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <BrowserRouter>
+      <BrowserRouter basename="/final-capstone">
         <App />
       </BrowserRouter>
     </Provider>

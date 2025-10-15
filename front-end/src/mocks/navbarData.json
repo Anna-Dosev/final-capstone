@@ -15,6 +15,15 @@
     "onLoggedOut": true,
     "text": "Blog"
   },
+
+  {
+    "className": "navs__secondary",
+    "href": "/resources",
+    "id": 4,
+    "onLoggedIn": false,
+    "onLoggedOut": false,
+    "text": "Resources"
+  },
   {
     "className": "navs__secondary",
     "href": "/about",
@@ -22,5 +31,13 @@
     "onLoggedIn": true,
     "onLoggedOut": true,
     "text": "About"
+  },
+  {
+    "className": "navs__primary",
+    "href": "/test",
+    "id": 6,
+    "onLoggedIn": false,
+    "onLoggedOut": false,
+    "text": "Test"
   }
 ]
