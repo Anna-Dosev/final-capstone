@@ -11,9 +11,9 @@ const WelcomeAbout = () => {
       <div className="about-container-text">
         <h1 className="welcome-title">Welcome!</h1>
         <p className="intro-text">
-          Hi, I'm Anna, an adventure enthusiast based in Salt Lake City.
-          Throughout the years working remotely as a QA Engineer, I've gained a
-          keen interest in web development and visual storytelling.
+          Hi, I'm Anna, an adventure enthusiast based in San Diego. Throughout
+          the years working remotely as a QA Engineer, I've gained a keen
+          interest in web development and visual storytelling.
           <br></br>
           <br></br>
           Originally created as a capstone project for a full-stack web
