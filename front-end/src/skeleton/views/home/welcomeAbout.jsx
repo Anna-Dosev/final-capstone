@@ -22,9 +22,9 @@ const WelcomeAbout = () => {
           creativity and technology enhance our travel experiences.
           <br></br>
           <br></br>
-          Built with React, Node, JSX, HTML and CSS
+          Built with React, Vite, Node, JSX, HTML and CSS
           <br></br>
-          Deployed via Railway (eventually)
+          Deployed via Github Pages
         </p>
       </div>
       <div className="logo-container">
