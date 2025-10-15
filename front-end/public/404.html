@@ -10,35 +10,42 @@
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
-        <link rel="manifest" href="/manifest.json" />
+        <link rel="manifest" href="/final-capstone/manifest.json" />
         <!--
       In Vite, public assets are served from the root.
       Files in the public folder can be referenced with absolute paths starting with "/".
     -->
         <title>Travel & Parks Blog</title>
         <script type="text/javascript">
-            // GitHub Pages redirect handler
-            (function (l) {
-                if (l.search[1] === "/") {
-                    var decoded = l.search
+            // GitHub Pages SPA redirect
+            var pathSegmentsToKeep = 1;
+            var l = window.location;
+            l.replace(
+                l.protocol +
+                    "//" +
+                    l.hostname +
+                    (l.port ? ":" + l.port : "") +
+                    l.pathname
+                        .split("/")
+                        .slice(0, 1 + pathSegmentsToKeep)
+                        .join("/") +
+                    "/?/" +
+                    l.pathname
                         .slice(1)
-                        .split("&")
-                        .map(function (s) {
-                            return s.replace(/~and~/g, "&");
-                        })
-                        .join("?");
-                    window.history.replaceState(
-                        null,
-                        null,
-                        l.pathname.slice(0, -1) + decoded + l.hash,
-                    );
-                }
-            })(window.location);
+                        .split("/")
+                        .slice(pathSegmentsToKeep)
+                        .join("/")
+                        .replace(/&/g, "~and~") +
+                    (l.search
+                        ? "&" + l.search.slice(1).replace(/&/g, "~and~")
+                        : "") +
+                    l.hash,
+            );
         </script>
     </head>
     <body>
         <noscript>You need to enable JavaScript to run this app.</noscript>
         <div id="root"></div>
-        <script type="module" src="/src/main.jsx"></script>
+        <script type="module" src="/final-capstone/src/main.jsx"></script>
     </body>
 </html>
