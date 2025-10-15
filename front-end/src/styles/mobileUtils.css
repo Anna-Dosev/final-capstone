@@ -1,0 +1,275 @@
+/* Mobile Utility Styles for Overall Site Responsiveness */
+
+/* Base Mobile Reset */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Container utilities for mobile centering */
+.mobile-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.mobile-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Image responsiveness utilities */
+.mobile-responsive-image {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.mobile-circle-image {
+    border-radius: 50%;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Text utilities for mobile */
+.mobile-text-center {
+    text-align: center;
+}
+
+.mobile-text-small {
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.mobile-text-medium {
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+/* Spacing utilities */
+.mobile-padding-small {
+    padding: 10px;
+}
+
+.mobile-padding-medium {
+    padding: 20px;
+}
+
+.mobile-margin-small {
+    margin: 10px 0;
+}
+
+.mobile-margin-medium {
+    margin: 20px 0;
+}
+
+/* Layout utilities */
+.mobile-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.mobile-hide {
+    display: none;
+}
+
+.mobile-show {
+    display: block;
+}
+
+/* Button utilities for mobile */
+.mobile-button {
+    padding: 12px 24px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin: 10px 0;
+    min-height: 44px; /* iOS touch target */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Touch-friendly interactive elements */
+.mobile-touch-target {
+    min-height: 44px;
+    min-width: 44px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Responsive breakpoints */
+@media only screen and (max-width: 1024px) {
+    .desktop-only {
+        display: none;
+    }
+
+    .tablet-mobile-only {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .tablet-only {
+        display: none;
+    }
+
+    .mobile-only {
+        display: block;
+    }
+
+    /* Reduce margins and padding on mobile */
+    .mobile-container {
+        padding: 0 10px;
+    }
+
+    /* Stack items vertically on mobile */
+    .mobile-stack-768 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        text-align: center;
+    }
+
+    /* Adjust font sizes for mobile */
+    h1 {
+        font-size: 2rem !important;
+    }
+
+    h2 {
+        font-size: 1.5rem !important;
+    }
+
+    h3 {
+        font-size: 1.25rem !important;
+    }
+
+    p {
+        font-size: 1rem !important;
+        line-height: 1.6 !important;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .mobile-480-only {
+        display: block;
+    }
+
+    .mobile-hide-480 {
+        display: none;
+    }
+
+    /* Even smaller adjustments for very small screens */
+    .mobile-container {
+        padding: 0 5px;
+    }
+
+    h1 {
+        font-size: 1.75rem !important;
+    }
+
+    h2 {
+        font-size: 1.25rem !important;
+    }
+
+    h3 {
+        font-size: 1.1rem !important;
+    }
+
+    p {
+        font-size: 0.9rem !important;
+    }
+
+    /* Very small screen stack with tighter spacing */
+    .mobile-stack-480 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        text-align: center;
+    }
+}
+
+/* Landscape orientation adjustments for mobile */
+@media only screen and (max-width: 768px) and (orientation: landscape) {
+    .hero-container-image {
+        height: 300px !important;
+    }
+
+    .mobile-landscape-adjust {
+        padding: 10px 0;
+    }
+}
+
+/* High DPI displays */
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+       only screen and (min-resolution: 192dpi) {
+    .mobile-responsive-image {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* iOS specific adjustments */
+@supports (-webkit-touch-callout: none) {
+    .mobile-touch-target {
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        user-select: none;
+    }
+
+    /* Fix iOS viewport issues */
+    body {
+        -webkit-text-size-adjust: 100%;
+        -webkit-font-smoothing: antialiased;
+    }
+}
+
+/* Android specific adjustments */
+@media screen and (-webkit-device-pixel-ratio: 1.5) {
+    .mobile-responsive-image {
+        image-rendering: -moz-crisp-edges;
+        image-rendering: -o-crisp-edges;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* Performance optimizations for mobile */
+.mobile-optimized {
+    will-change: transform;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+/* Accessibility improvements for mobile */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Dark mode support for mobile */
+@media (prefers-color-scheme: dark) {
+    .mobile-dark-mode {
+        background-color: #1a1a1a;
+        color: #ffffff;
+    }
+}

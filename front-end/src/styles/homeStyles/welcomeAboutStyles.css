@@ -1,98 +1,165 @@
 .welcome-container {
-  display: flex;
-  flex-direction: row;
-  background-color: rgba(232, 224, 213, 1);
-  width: 70%;
-  overflow: visible;
-  min-height: 400px;
-  padding: 50px 0;
-  margin: -100px auto auto auto;
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(232, 224, 213, 1);
+    width: 70%;
+    overflow: visible;
+    min-height: 400px;
+    padding: 50px 0;
+    margin: -100px auto auto auto;
 }
 
 .intro-pic-container {
-  background-color: ivory;
-  border: 10px solid ivory;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  width: 35%;
-  margin-left: -80px;
-  transform: rotate(-7deg);
+    background-color: ivory;
+    border: 10px solid ivory;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 35%;
+    margin-left: -80px;
+    transform: rotate(-7deg);
 }
 
 .introPic {
-  object-fit: cover;
-  height: 100%;
-  width: 100%;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
 }
 
 .about-container-text {
-  width: 45%;
-  align-items: left;
-  padding-left: 60px;
+    width: 45%;
+    align-items: left;
+    padding-left: 60px;
 }
 
 .welcome-title {
-  color: #32384d;
-  font-family: "Apple Chancery", cursive;
-  font-size: 3.5rem;
-  letter-spacing: 0.15em;
-  margin: 0 0 0 0;
+    color: #32384d;
+    font-family: "Apple Chancery", cursive;
+    font-size: 3.5rem;
+    letter-spacing: 0.15em;
+    margin: 0 0 0 0;
 }
 
 .intro-text {
-  font-size: 1.15rem;
-  color: #453e45;
-  letter-spacing: 0.05em;
-  line-height: 30px;
-  font-family: sans-serif;
+    font-size: 1.15rem;
+    color: #453e45;
+    letter-spacing: 0.05em;
+    line-height: 30px;
+    font-family: sans-serif;
 }
 
 .logo-container {
-  position: absolute;
-  right: 3%;
-  width: 25%;
-  margin: 375px 0 0 0;
+    position: absolute;
+    right: 3%;
+    width: 25%;
+    margin: 375px 0 0 0;
 }
 
 .logo {
-  width: 100%;
-  height: auto;
+    width: 100%;
+    height: auto;
 }
 
 /* RESPONSIVE */
 
 @media only screen and (max-width: 1350px) {
-  .welcome-container {
-    display: flex;
-    flex-direction: column;
-    background-color: rgba(232, 224, 213, 1);
-    align-items: center;
-    justify-content: center;
-  }
+    .welcome-container {
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(232, 224, 213, 1);
+        align-items: center;
+        justify-content: center;
+    }
 
-  .about-container-text {
-    width: 80%;
-    text-align: center;
-    margin: auto;
-    padding-left: 0px;
-  }
+    .about-container-text {
+        width: 80%;
+        text-align: center;
+        margin: auto;
+        padding-left: 0px;
+    }
 
-  .welcome-title {
-    color: #32384d;
-    font-family: "Apple Chancery", cursive;
-    font-size: 3.5rem;
-    letter-spacing: 0.15em;
-  }
+    .welcome-title {
+        color: #32384d;
+        font-family: "Apple Chancery", cursive;
+        font-size: 3.5rem;
+        letter-spacing: 0.15em;
+    }
 
-  .intro-pic-container {
-    width: 30%; /* Adjust as needed */
-    margin: auto;
-    transform: rotate(0deg);
-  }
+    .intro-pic-container {
+        width: 30%; /* Adjust as needed */
+        margin: auto;
+        transform: rotate(0deg);
+    }
 
-  .logo-container {
-    position: static;
-    width: 30%;
-    margin: -25px 0 0 0;
-  }
+    .logo-container {
+        position: static;
+        width: 30%;
+        margin: -25px 0 0 0;
+    }
+}
+
+/* Mobile Responsive Styles for iPhone */
+@media only screen and (max-width: 768px) {
+    .welcome-container {
+        width: 90%;
+        margin: -50px auto auto auto;
+        padding: 30px 15px;
+        min-height: auto;
+    }
+
+    .intro-pic-container {
+        width: 60%;
+        margin: 0 auto 20px auto;
+        border: 5px solid ivory;
+    }
+
+    .about-container-text {
+        width: 95%;
+        padding: 0;
+    }
+
+    .welcome-title {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+        letter-spacing: 0.1em;
+    }
+
+    .intro-text {
+        font-size: 1rem;
+        line-height: 1.6;
+        padding: 0 10px;
+    }
+
+    .logo-container {
+        width: 40%;
+        margin: 20px 0 0 0;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .welcome-container {
+        width: 95%;
+        margin: -30px auto auto auto;
+        padding: 20px 10px;
+    }
+
+    .intro-pic-container {
+        width: 80%;
+        margin: 0 auto 15px auto;
+    }
+
+    .welcome-title {
+        font-size: 2rem;
+        letter-spacing: 0.05em;
+    }
+
+    .intro-text {
+        font-size: 0.9rem;
+        line-height: 1.5;
+        padding: 0 5px;
+    }
+
+    .logo-container {
+        width: 50%;
+        margin: 15px 0 0 0;
+    }
 }

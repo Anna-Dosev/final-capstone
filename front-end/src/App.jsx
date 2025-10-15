@@ -5,6 +5,7 @@ import navbarData from "./mocks/navbarData.json";
 import Header from "./skeleton/sections/header";
 import Main from "./skeleton/sections/main";
 import { useScrollToTop } from "./scrollToTop";
+import "./styles/mobileUtils.css";
 
 function App() {
   useScrollToTop();
